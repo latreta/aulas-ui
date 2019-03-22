@@ -18,7 +18,7 @@ footer {
 }
 
 label {
-    display:block;
+    display:block!important;
     font-weight: bold;
     font-size:110%;
 }
@@ -69,4 +69,12 @@ tr {
     -webkit-animation:urgencia 5s infinite; /* Safari and Chrome */
 }
 
+.inputFull input,
+.inputFull select {
+    width:100%!important;
+    margin-bottom:15px;
+}
 
+button:first-child {
+    margin-right: 8px;
+}

@@ -6,7 +6,7 @@ export interface Aula {
     professor: string;
     horarioInicio: string;
     horarioFim: string;
-    horaCadastro: string;
+    horaCadastro: Date;
 }
 
 export interface Professor {
@@ -17,4 +17,10 @@ export interface Professor {
 export interface Sala {
     id: number;
     nome: string;
+}
+
+export interface User {
+    id: number;
+    nome: string;
+    permissoes: string[];
 }

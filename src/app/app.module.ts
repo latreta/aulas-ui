@@ -6,10 +6,12 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 import { ListaAulasComponent } from './aulas/lista-aulas/lista-aulas.component';
 import { CadastraAulasComponent } from './aulas/cadastra-aulas/cadastra-aulas.component';
 import { AlteraAulasComponent } from './aulas/altera-aulas/altera-aulas.component';
+import { FormAulaComponent } from './aulas/form-aula/form-aula.component';
 
 import { ListaCadeirasComponent } from './cadeiras/lista-cadeiras/lista-cadeiras.component';
 import { CadastraCadeirasComponent } from './cadeiras/cadastra-cadeiras/cadastra-cadeiras.component';
@@ -26,8 +28,9 @@ import { DropdownModule } from 'primeng/dropdown';
 import { MenubarModule } from 'primeng/menubar';
 import { InputTextModule } from 'primeng/inputtext';
 import { TableModule } from 'primeng/table';
-import { FooterComponent } from './footer/footer.component';
-import { FormAulaComponent } from './aulas/form-aula/form-aula.component';
+import { DialogModule } from 'primeng/dialog';
+import { PasswordModule } from 'primeng/password';
+
 
 
 @NgModule({
@@ -56,7 +59,9 @@ import { FormAulaComponent } from './aulas/form-aula/form-aula.component';
     TableModule,
     BrowserAnimationsModule,
     InputTextModule,
-    AppRoutingModule
+    AppRoutingModule,
+    DialogModule,
+    PasswordModule
   ],
   providers: [],
   bootstrap: [AppComponent]

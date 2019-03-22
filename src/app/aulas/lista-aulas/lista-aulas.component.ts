@@ -9,8 +9,10 @@ export class ListaAulasComponent implements OnInit {
 
   aulas: Aula[];
   cols: any[];
+  today: Date = new Date();
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
     this.cols = [
@@ -22,15 +24,17 @@ export class ListaAulasComponent implements OnInit {
     ];
     this.aulas = [
       {
+        id: 0,
         nome: 'Aula 1',
         sala: 'B01',
         cadeira: 'Cadeira 1',
         horarioInicio: '07:10',
         horarioFim: '08:50',
         professor: 'Professor 1',
-        horaCadastro: '08:00'
+        horaCadastro: new Date('March 21, 2019 08:13:00')
       }
     ];
+
   }
 
 }

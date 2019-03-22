@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../core/model';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  user: User;
+  display = false;
+
+  constructor() {
+
+  }
 
   ngOnInit() {
+  }
+
+  showDialog() {
+    this.display = true;
   }
 
 }
