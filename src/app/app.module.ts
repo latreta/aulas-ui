@@ -1,19 +1,24 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
 import { UserModule } from './user/user.module';
+import { NgModule } from '@angular/core';
+import { BrowserModule} from '@angular/platform-browser';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { HeaderComponent } from './header/header.component';
+import { AulaModule } from './aula/aula.module';
 
-import {InputTextModule} from 'primeng/inputtext';
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DashboardComponent,
+    HeaderComponent
   ],
   imports: [
-    BrowserModule,
-    InputTextModule,
-    UserModule
+    UserModule,
+    AulaModule,
+    BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]

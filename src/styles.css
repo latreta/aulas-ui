@@ -6,4 +6,10 @@ body {
 
 label {
     display: block;
+    font-weight: bold;
+}
+
+.text-right {
+    text-align:right!important;
+    color:red!important;
 }
