@@ -1,16 +1,12 @@
 import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ListaAulaComponent } from './lista.aula/lista.aula.component';
+import { ListarAulaComponent } from './component/listar-aula/listar-aula.component';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
-    declarations: [ListaAulaComponent],
-    imports: [
-        FormsModule,
-        FormsModule,
-        ReactiveFormsModule,
-    ],
-    exports:[ListaAulaComponent]
+    declarations: [ListarAulaComponent],
+    imports: [CommonModule],
+    exports: [ListarAulaComponent]
 })
 export class AulaModule {
 

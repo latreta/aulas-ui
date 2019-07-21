@@ -2,8 +2,7 @@ import { AppComponent } from './app.component';
 import { UserModule } from './user/user.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule} from '@angular/platform-browser';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { HeaderComponent } from './header/header.component';
+import { HomeModule } from './home/home.module';
 import { AulaModule } from './aula/aula.module';
 
 
@@ -12,11 +11,10 @@ import { AulaModule } from './aula/aula.module';
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent,
-    HeaderComponent
   ],
   imports: [
     UserModule,
+    HomeModule,
     AulaModule,
     BrowserModule
   ],

@@ -1,0 +1,24 @@
+<div class="container-fluid">
+    <div class="row">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Turma</th>
+                    <th scope="col">Cadeira</th>
+                    <th scope="col">Professor</th>
+                    <th scope="col">Início</th>
+                    <th scope="col">Fim</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let aula of aulas">
+                    <td>{{aula.turma}}</td>
+                    <td>{{aula.cadeira}}</td>
+                    <td>{{aula.professor}}</td>
+                    <td>{{aula.inicio}}</td>
+                    <td>{{aula.fim}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
