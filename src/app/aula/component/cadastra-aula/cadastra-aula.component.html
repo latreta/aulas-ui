@@ -1,1 +1,45 @@
-<p>cadastra-aula works!</p>
+<div class="container">
+    <div class="row text-center">
+        <div class="col-md-8 order-md-1" style="margin:30px auto;">
+            <h4 class="mb-3">Cadastro de aula</h4>
+            <form class="needs-validation" novalidate="">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="firstName">Cadeira</label>
+                        <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="lastName">Professor</label>
+                        <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <label for="country">Sala</label>
+                        <select class="custom-select d-block w-100" id="country" required="">
+                            <option value="">Escolha uma...</option>
+                            <option>United States</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <label for="country">Começa às</label>
+                        <select class="custom-select d-block w-100" id="country" required="">
+                            <option value="">Escolha uma...</option>
+                            <option>United States</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <label for="state">Termina às</label>
+                        <select class="custom-select d-block w-100" id="state" required="">
+                            <option value="">Escolha uma...</option>
+                            <option>California</option>
+                        </select>
+                    </div>
+                </div>
+                <hr class="mb-4">
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+</div>

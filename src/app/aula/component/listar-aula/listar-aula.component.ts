@@ -5,7 +5,7 @@ import { AulaService } from '../../service/aula.service';
 @Component({
   selector: 'app-listar-aula',
   templateUrl: './listar-aula.component.html',
-  styleUrls: ['./listar-aula.component.css']
+  styleUrls: ['./listar-aula.component.css'],
 })
 export class ListarAulaComponent implements OnInit {
 

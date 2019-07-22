@@ -16,7 +16,6 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     this.actions = this.authService.getInformation().actions;
-    console.log(this.actions);
   }
 
 }

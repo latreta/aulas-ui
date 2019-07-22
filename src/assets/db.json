@@ -1,0 +1,22 @@
+{
+    "users": {"name": "La Treta", "actions": 
+        [{
+            "id" : 0, 
+            "label": "Minha Conta", 
+            "address": "/minhaconta"
+        }]
+    },
+    "aulas": [
+      {
+          "id": 0, 
+          "turma": "BM",
+          "sala": {"id":0, "name": "7", "bloco": {"id": 0, "name": "LIP"}},
+          "professor": {"id": 0, "name": "Cálculo 4"},
+          "inicio": "08:50",
+          "fim": "10:30"
+        }
+    ],
+    "salas": [{"id":0, "name": "7", "bloco": {"id": 0, "name": "LIP"}}],
+    "blocos": [{"id": 0, "name": "LIP"}],
+    "cadeiras": [{"id": 0, "name": "Cálculo 4"}]
+  }

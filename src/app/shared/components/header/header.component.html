@@ -1,9 +1,9 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <img src="assets/policlass.png" height="40px">
+  <a [routerLink]="['/aulas']" routerLinkActive="active" ><img src="assets/policlass.png" height="40px"></a>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <div class="navbar-nav mr-auto"></div>
     <div class="my-4 my-lg-0">
-        <a [routerLink]="['/aulas/adicionar']" routerLinkActive="router-link-active" ><i class="fa fa-fw fa-plus"></i> Nova Aula</a>
+        <a [routerLink]="['/aulas/adicionar']" routerLinkActive="active"><i class="fa fa-fw fa-plus"></i> Nova Aula</a>
     </div>
     <div>
       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
