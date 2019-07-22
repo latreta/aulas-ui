@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
-import { SignInComponent } from './signin/signin.component';
-import { SignUpComponent } from './signup/signup.component';
+import { SignInComponent } from './component/signin/signin.component';
+import { SignUpComponent } from './component/signup/signup.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
-    imports: [],
+    imports: [RouterModule],
     exports: [SignInComponent, SignUpComponent],
     declarations: [SignInComponent, SignUpComponent],
     providers: []

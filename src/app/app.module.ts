@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule} from '@angular/platform-browser';
 import { HomeModule } from './home/home.module';
 import { AulaModule } from './aula/aula.module';
+import { AppRoutingModule } from './app-routing.module';
 
 
 
@@ -16,7 +17,8 @@ import { AulaModule } from './aula/aula.module';
     UserModule,
     HomeModule,
     AulaModule,
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
