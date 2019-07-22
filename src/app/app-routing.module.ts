@@ -7,8 +7,7 @@ import { SignUpComponent } from './home/component/signup/signup.component';
 import { SignInComponent } from './home/component/signin/signin.component';
 
 const routes: Routes = [
-  {path: '*', redirectTo: '/aulas', pathMatch: 'full'},
-  {path: 'aulas', component: ListarAulaComponent},
+  {path: '', component: ListarAulaComponent},
   {path: 'aulas/adicionar', component: CadastraAulaComponent},
   {path: 'cadastrar', component: SignUpComponent},
   {path: 'login', component: SignInComponent}

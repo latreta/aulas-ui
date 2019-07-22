@@ -6,7 +6,7 @@ import { HomeModule } from './home/home.module';
 import { AulaModule } from './aula/aula.module';
 import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
-import { CadastraBlocoComponent } from './bloco/cadastra-bloco/cadastra-bloco.component';
+import { CadastraBlocoComponent } from './bloco/components/cadastra-bloco/cadastra-bloco.component';
 
 
 
