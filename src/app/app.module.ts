@@ -5,6 +5,7 @@ import { BrowserModule} from '@angular/platform-browser';
 import { HomeModule } from './home/home.module';
 import { AulaModule } from './aula/aula.module';
 import { AppRoutingModule } from './app-routing.module';
+import { SharedModule } from './shared/shared.module';
 
 
 
@@ -16,6 +17,7 @@ import { AppRoutingModule } from './app-routing.module';
   imports: [
     UserModule,
     HomeModule,
+    SharedModule,
     AulaModule,
     BrowserModule,
     AppRoutingModule
