@@ -3,20 +3,26 @@
         <table class="table">
             <thead class="thead-dark">
                 <tr>
-                    <th scope="col">Turma</th>
+                    <th scope="col" class="text-left">Turma</th>
                     <th scope="col">Cadeira</th>
                     <th scope="col">Professor</th>
-                    <th scope="col">Início</th>
-                    <th scope="col">Fim</th>
+                    <th scope="col">Sala</th>
+                    <th scope="col" class="text-right">Início</th>
+                    <th scope="col" class="text-right">Fim</th>
+                    <th colspan="1" class="text-right"></th>
                 </tr>
             </thead>
             <tbody>
                 <tr *ngFor="let aula of aulas">
-                    <td>{{aula.turma}}</td>
-                    <td>{{aula.cadeira}}</td>
-                    <td>{{aula.professor}}</td>
-                    <td>{{aula.inicio}}</td>
-                    <td>{{aula.fim}}</td>
+                    <td class="text-left">{{aula.turma}}</td>
+                    <td>{{aula.cadeira.name}}</td>
+                    <td>{{aula.professor.name}}</td>
+                    <td>{{aula.sala.bloco.name}} {{aula.sala.name}}</td>
+                    <td class="text-right">{{aula.inicio}}</td>
+                    <td class="text-right">{{aula.fim}}</td>
+                    <td class="text-right">
+                        <button class="btn btn-secondary"><i class="fa fa-fw fa-cog"></i></button>
+                    </td>
                 </tr>
             </tbody>
         </table>

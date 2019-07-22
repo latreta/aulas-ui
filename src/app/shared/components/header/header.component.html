@@ -1,17 +1,20 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <img src="assets/policlass.png" height="40px">  
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <div class="navbar-nav mr-auto"></div>
-      <div class="form-inline my-2 my-lg-0">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="fa fa-fw fa-user-o"></i> Olá {{usuario}}!
-          </a>
-          <div class="dropdown-menu" style="left:unset;right:0;" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Minhas Aulas</a>
-            <a class="dropdown-item" href="#">Minha conta</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Sair</a>
-          </div>
+  <img src="assets/policlass.png" height="40px">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="navbar-nav mr-auto"></div>
+    <div class="my-4 my-lg-0">
+        <a [routerLink]="['/aulas/adicionar']" routerLinkActive="router-link-active" ><i class="fa fa-fw fa-plus"></i> Nova Aula</a>
+    </div>
+    <div>
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        <i class="fa fa-fw fa-user-o"></i> Olá {{usuario}}!
+      </a>
+      <div class="dropdown-menu" style="left:unset;right:0;" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" [routerLink]="[opcao.address]" routerLinkActive="router-link-active"  *ngFor="let opcao of actions">{{opcao.label}}</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Sair</a>
       </div>
     </div>
-  </nav>
+  </div>
+</nav>
