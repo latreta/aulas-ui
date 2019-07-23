@@ -8,6 +8,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
 import { BlocoModule } from './bloco/bloco.module';
 import { SalaModule } from './sala/sala.module';
+import { CadastraDicenteComponent } from './dicente/components/cadastra-dicente/cadastra-dicente.component';
+import { DicenteModule } from './dicente/dicente.module';
 
 
 
@@ -22,6 +24,7 @@ import { SalaModule } from './sala/sala.module';
     SharedModule,
     SalaModule,
     BlocoModule,
+    DicenteModule,
     AulaModule,
     BrowserModule,
     AppRoutingModule

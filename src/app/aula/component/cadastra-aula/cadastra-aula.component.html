@@ -4,16 +4,21 @@
             <h4 class="mb-3">Cadastro de aula</h4>
             <form class="needs-validation" [formGroup]="aulaForm" (ngSubmit)="cadastrar();">
                 <div class="row">
-                    <div class="col-md-6 mb-3">
+                    <div class="col-md-4 mb-3">
                         <label for="firstName">Cadeira</label>
                         <input type="text" class="form-control" formControlName="name" placeholder="" value=""
                             required="">
                     </div>
-                    <div class="col-md-6 mb-3">
+                    <div class="col-md-4 mb-3">
                         <label for="lastName">Professor</label>
                         <input type="text" class="form-control" formControlName="professor" placeholder="" value=""
                             required="">
                     </div>
+                    <div class="col-md-4 mb-3">
+                            <label for="lastName">Turma</label>
+                            <input type="text" class="form-control" formControlName="turma" placeholder="BM, VM, CM..." value=""
+                                required="">
+                        </div>
                 </div>
 
                 <div class="row">
@@ -21,7 +26,7 @@
                         <label for="country">Sala</label>
                         <select class="form-control d-block w-100" required="" formControlName="sala">
                             <option value="">Escolha uma...</option>
-                            <option value="{{sala.id}}" *ngFor="let sala of salas">{{sala.bloco.name}}-{{sala.name}}
+                            <option value="{{i}}" *ngFor="let sala of salas; let i = index">{{sala.bloco.name}}-{{sala.name}}
                             </option>
                         </select>
                         <div class="invalid-feedback">

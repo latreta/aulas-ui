@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CadastraUsuarioComponent } from './cadastra.usuario/cadastra.usuario.component';
+import { CadastraUsuarioComponent } from './components/cadastra.usuario/cadastra.usuario.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 

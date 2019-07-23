@@ -17,4 +17,8 @@ export class AulaService {
     return this.http.get<Aula[]>(this.endpointURL);
   }
 
+  cadastrar(aula: Aula): Observable<Aula> {
+    return this.http.post<Aula>(this.endpointURL, aula);
+  }
+
 }

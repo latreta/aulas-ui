@@ -14,7 +14,7 @@
       "id": 0,
       "turma": "BM",
       "cadeira": {
-        "id":0,
+        "id": 0,
         "name": "Cálculo 4"
       },
       "sala": {
@@ -36,7 +36,7 @@
       "id": 1,
       "turma": "VM",
       "cadeira": {
-        "id":0,
+        "id": 0,
         "name": "Cálculo 4"
       },
       "sala": {
@@ -53,6 +53,22 @@
       },
       "inicio": "08:50",
       "fim": "10:30"
+    },
+    {
+      "name": "sadas",
+      "professor": "asds",
+      "turma": "asd",
+      "sala": {
+        "name": "1",
+        "bloco": {
+          "id": 0,
+          "name": "LIP"
+        },
+        "id": 2
+      },
+      "inicio": "08:50",
+      "fim": "10:30",
+      "id": 2
     }
   ],
   "salas": [
@@ -79,36 +95,88 @@
         "name": "LIP"
       },
       "id": 2
+    },
+    {
+      "name": "2",
+      "bloco": {
+        "name": "LIP",
+        "id": 5
+      },
+      "id": 3
+    },
+    {
+      "name": "1",
+      "bloco": {
+        "id": 0,
+        "name": "A"
+      },
+      "id": 4
+    },
+    {
+      "name": "2",
+      "bloco": {
+        "id": 0,
+        "name": "A"
+      },
+      "id": 5
+    },
+    {
+      "name": "3",
+      "bloco": {
+        "id": 0,
+        "name": "A"
+      },
+      "id": 6
+    },
+    {
+      "name": "1",
+      "bloco": {
+        "name": "B",
+        "id": 1
+      },
+      "id": 7
+    },
+    {
+      "name": "2",
+      "bloco": {
+        "name": "B",
+        "id": 1
+      },
+      "id": 8
+    },
+    {
+      "name": "8",
+      "bloco": {
+        "name": "B",
+        "id": 1
+      },
+      "id": 9
     }
   ],
   "blocos": [
     {
       "id": 0,
-      "name": "LIP"
+      "name": "A"
     },
     {
-      "name": "sadasdas",
+      "name": "B",
       "id": 1
     },
     {
-      "name": "LIP",
+      "name": "C",
       "id": 2
     },
     {
-      "name": "C",
+      "name": "I",
       "id": 3
     },
     {
-      "name": "",
+      "name": "K",
       "id": 4
     },
     {
-      "name": "",
+      "name": "LIP",
       "id": 5
-    },
-    {
-      "name": "U",
-      "id": 6
     }
   ],
   "cadeiras": [
