@@ -7,6 +7,7 @@ import { AulaModule } from './aula/aula.module';
 import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
 import { BlocoModule } from './bloco/bloco.module';
+import { SalaModule } from './sala/sala.module';
 
 
 
@@ -19,6 +20,7 @@ import { BlocoModule } from './bloco/bloco.module';
     UserModule,
     HomeModule,
     SharedModule,
+    SalaModule,
     BlocoModule,
     AulaModule,
     BrowserModule,

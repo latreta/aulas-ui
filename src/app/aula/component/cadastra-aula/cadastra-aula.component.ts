@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { BlocoService } from 'src/app/bloco/service/bloco.service';
-import { Bloco } from 'src/app/core/model';
+import { Sala } from 'src/app/core/model';
+import { SalaService } from 'src/app/sala/service/sala.service';
 
 @Component({
   templateUrl: './cadastra-aula.component.html',
@@ -8,16 +8,17 @@ import { Bloco } from 'src/app/core/model';
 })
 export class CadastraAulaComponent implements OnInit {
 
-  private blocos: Bloco[] = [];
-  constructor(private blocoService: BlocoService) { }
+  private salas: Sala[] = [];
+
+  constructor(private salaService: SalaService) { }
 
   ngOnInit() {
-    this.getBlocos();
+    this.getSalas();
   }
 
-  getBlocos(): void {
-    this.blocoService.getBlocos().subscribe(response => {
-      this.blocos = response;
+  getSalas(): void {
+    this.salaService.getSalas().subscribe(response => {
+      this.salas = response;
     });
   }
 
