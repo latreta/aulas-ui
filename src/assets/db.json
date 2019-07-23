@@ -1,22 +1,70 @@
 {
-    "users": {"name": "La Treta", "actions": 
-        [{
-            "id" : 0, 
-            "label": "Minha Conta", 
-            "address": "/minhaconta"
-        }]
-    },
-    "aulas": [
+  "users": {
+    "name": "La Treta",
+    "actions": [
       {
-          "id": 0, 
-          "turma": "BM",
-          "sala": {"id":0, "name": "7", "bloco": {"id": 0, "name": "LIP"}},
-          "professor": {"id": 0, "name": "Cálculo 4"},
-          "inicio": "08:50",
-          "fim": "10:30"
+        "id": 0,
+        "label": "Minha Conta",
+        "address": "/minhaconta"
+      }
+    ]
+  },
+  "aulas": [
+    {
+      "id": 0,
+      "turma": "BM",
+      "sala": {
+        "id": 0,
+        "name": "7",
+        "bloco": {
+          "id": 0,
+          "name": "LIP"
         }
-    ],
-    "salas": [{"id":0, "name": "7", "bloco": {"id": 0, "name": "LIP"}}],
-    "blocos": [{"id": 0, "name": "LIP"}],
-    "cadeiras": [{"id": 0, "name": "Cálculo 4"}]
-  }
+      },
+      "professor": {
+        "id": 0,
+        "name": "Cálculo 4"
+      },
+      "inicio": "08:50",
+      "fim": "10:30"
+    }
+  ],
+  "salas": [
+    {
+      "id": 0,
+      "name": "7",
+      "bloco": {
+        "id": 0,
+        "name": "LIP"
+      }
+    }
+  ],
+  "blocos": [
+    {
+      "id": 0,
+      "name": "LIP"
+    },
+    {
+      "name": "sadasdas",
+      "id": 1
+    },
+    {
+      "name": "LIP",
+      "id": 2
+    },
+    {
+      "name": "C",
+      "id": 3
+    },
+    {
+      "name": "",
+      "id": 4
+    }
+  ],
+  "cadeiras": [
+    {
+      "id": 0,
+      "name": "Cálculo 4"
+    }
+  ]
+}

@@ -5,12 +5,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
     declarations:[CadastraUsuarioComponent],
-    imports:[
-        FormsModule,
+    imports: [
         FormsModule,
         ReactiveFormsModule,
     ],
-    exports:[CadastraUsuarioComponent]
+    exports: [CadastraUsuarioComponent]
 })
 export class UserModule {
 

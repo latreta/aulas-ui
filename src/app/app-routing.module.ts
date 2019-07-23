@@ -5,10 +5,12 @@ import { ListarAulaComponent } from './aula/component/listar-aula/listar-aula.co
 import { CadastraAulaComponent } from './aula/component/cadastra-aula/cadastra-aula.component';
 import { SignUpComponent } from './home/component/signup/signup.component';
 import { SignInComponent } from './home/component/signin/signin.component';
+import { CadastraBlocoComponent } from './bloco/components/cadastra-bloco/cadastra-bloco.component';
 
 const routes: Routes = [
   {path: '', component: ListarAulaComponent},
   {path: 'aulas/adicionar', component: CadastraAulaComponent},
+  {path: 'blocos/adicionar', component: CadastraBlocoComponent},
   {path: 'cadastrar', component: SignUpComponent},
   {path: 'login', component: SignInComponent}
 ];

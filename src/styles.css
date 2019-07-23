@@ -4,3 +4,11 @@ body {
     margin:0;
     padding:0;
 }
+
+.marginAuto {
+    margin: 40px auto;
+}
+
+.marginLateralAuto {
+    margin: 15px auto;
+}
