@@ -19,6 +19,11 @@ export interface Aula {
     fim: string;
 }
 
+export interface Horario {
+    hour: string;
+    minute: string;
+}
+
 export interface Cadeira {
     id: number;
     name: string;

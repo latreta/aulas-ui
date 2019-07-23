@@ -13,6 +13,10 @@
     {
       "id": 0,
       "turma": "BM",
+      "cadeira": {
+        "id":0,
+        "name": "Cálculo 4"
+      },
       "sala": {
         "id": 0,
         "name": "7",
@@ -23,7 +27,29 @@
       },
       "professor": {
         "id": 0,
+        "name": "Professor 1"
+      },
+      "inicio": "08:50",
+      "fim": "10:30"
+    },
+    {
+      "id": 1,
+      "turma": "VM",
+      "cadeira": {
+        "id":0,
         "name": "Cálculo 4"
+      },
+      "sala": {
+        "id": 0,
+        "name": "3",
+        "bloco": {
+          "id": 0,
+          "name": "LIP"
+        }
+      },
+      "professor": {
+        "id": 1,
+        "name": "Professor 2"
       },
       "inicio": "08:50",
       "fim": "10:30"
@@ -75,6 +101,14 @@
     {
       "name": "",
       "id": 4
+    },
+    {
+      "name": "",
+      "id": 5
+    },
+    {
+      "name": "U",
+      "id": 6
     }
   ],
   "cadeiras": [

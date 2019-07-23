@@ -14,7 +14,13 @@ export class ListarAulaComponent implements OnInit {
   constructor(private aulaService: AulaService) { }
 
   ngOnInit() {
-    this.aulas = this.aulaService.listarAulas();
+    this.getAulas();
+  }
+
+  getAulas(): void {
+    this.aulaService.listarAulas().subscribe(response => {
+      this.aulas = response;
+    }, err => console.log(err));
   }
 
 }

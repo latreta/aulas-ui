@@ -1,25 +1,20 @@
 import { Injectable } from '@angular/core';
 import { Aula } from 'src/app/core/model';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AulaService {
 
-  constructor() { }
+  private endpointURL = `${environment.API_URL}aulas`;
 
-  listarAulas(): Aula[] {
-    const aulas = [{
-      id: 0,
-      turma: 'BM',
-      sala: {id: 0, name: '7', bloco: { id: 0, name: 'LIP'}},
-      professor: {id: 0, name: 'Professor teste'},
-      cadeira: {id: 0, name: 'Cálculo 4'},
-      inicio: '08:50',
-      fim: '10:30'
-    }
-    ];
-    return aulas;
+  constructor(private http: HttpClient) { }
+
+  listarAulas(): Observable<Aula[]> {
+    return this.http.get<Aula[]>(this.endpointURL);
   }
 
 }
