@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Bloco } from 'src/app/core/model';
-import { BlocoService } from '../../service/bloco.service';
+import { BlocoService } from '../../../core/services/bloco/bloco.service';
 
 @Component({
   selector: 'app-cadastra-bloco',
