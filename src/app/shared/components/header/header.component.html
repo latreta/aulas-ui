@@ -1,5 +1,33 @@
-<nav class="navbar navbar-expand-sm bg-light navbar-light sticky-top">
-  <!-- Toggler/collapsibe Button -->
+<nav class="floating-menu">
+    <ul class="main-menu">
+        <li>
+            <a [routerLink]="['/']" routerLinkActive="active"  class="ripple">
+              <i class="fa fa-home fa-lg"></i>
+            </a>
+        </li>
+        <!--
+          <li>
+            <a [routerLink]="['/assinaturas']" routerLinkActive="active" class="ripple">
+              <i class="fa fa-file fa-lg"></i>
+            </a>
+        </li>
+        -->
+        <li>
+            <a [routerLink]="['/conta']" routerLinkActive="active"   class="ripple">
+              <i class="fa fa-user fa-lg"></i>
+            </a>
+        </li>
+        <li>
+            <a [routerLink]="['/opcoes']" routerLinkActive="active"  class="ripple">
+              <i class="fa fa-cogs fa-lg"></i>
+            </a>
+        </li>
+    </ul>
+    <div class="menu-bg"></div>
+</nav>
+
+<!--
+  <nav class="navbar navbar-expand-sm bg-light navbar-light sticky-top">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -24,8 +52,6 @@
               </a>
           </div>
         </li>
-
-        <!-- Dropdown -->
         <li class="nav-item dropdown" *ngIf="(user$ | async) as user; else login">
           <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
             Olá {{user.name}}
@@ -43,3 +69,4 @@
         </ng-template>
   </ul>
 </nav>
+-->
