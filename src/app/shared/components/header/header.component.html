@@ -1,23 +1,52 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a [routerLink]="['/']" routerLinkActive="active" ><img src="assets/policlass.png" height="40px"></a>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <div class="navbar-nav mr-auto"></div>
-    <div class="my-4 my-lg-0">
-        <a [routerLink]="['/aulas/adicionar']" routerLinkActive="active"><i class="fa fa-fw fa-plus"></i> Nova Aula</a>
-        <a [routerLink]="['/blocos/adicionar']" routerLinkActive="active"><i class="fa fa-fw fa-plus"></i> Novo Bloco</a>
-        <a [routerLink]="['/salas/adicionar']" routerLinkActive="active"><i class="fa fa-fw fa-plus"></i> Nova Sala</a>
-        <a [routerLink]="['/dicentes/adicionar']" routerLinkActive="active"><i class="fa fa-fw fa-plus"></i> Novo Dicente</a>
-    </div>
-    <div>
-      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-        aria-haspopup="true" aria-expanded="false">
-        <i class="fa fa-fw fa-user-o"></i> Olá {{usuario}}!
-      </a>
-      <div class="dropdown-menu" style="left:unset;right:0;" aria-labelledby="navbarDropdown">
-        <a class="dropdown-item" [routerLink]="[opcao.address]" routerLinkActive="router-link-active"  *ngFor="let opcao of actions">{{opcao.label}}</a>
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="#">Sair</a>
-      </div>
-    </div>
+<nav class="navbar navbar-expand-md bg-light navbar-light">
+  <a class="navbar-brand" [routerLink]="['/']" routerLinkActive="active">Poli Class</a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardropAdd" data-toggle="dropdown">
+          Opções
+        </a>
+        <div class="dropdown-menu bg-light">
+          <a class="dropdown-item" [routerLink]="['/aulas/adicionar']" routerLinkActive="active">
+            Nova Aula
+          </a>
+          <a class="dropdown-item" [routerLink]="['/salas/adicionar']" routerLinkActive="active">
+            Nova Sala
+          </a>
+          <a class="dropdown-item" [routerLink]="['/blocos/adicionar']" routerLinkActive="active">
+            Novo Bloco
+          </a>
+          <a class="dropdown-item" [routerLink]="['/dicentes/adicionar']" routerLinkActive="active">
+            Novo Dicente
+          </a>
+        </div>
+      </li>
+      <li class="nav-item dropdown" *ngIf="(user$ | async) as user; else login">
+          <a class="nav-link dropdown-toggle" id="navbardropAcc" data-toggle="dropdown">
+            Olá {{user.name}}
+          </a>
+          <div class="dropdown-menu bg-light">
+            <a class="dropdown-item" routerLinkActive="active">
+              <i class="fa fa-fw fa-bell-o"></i> Minhas assinaturas
+            </a>
+            <a class="dropdown-item" routerLinkActive="active">
+              <i class="fa fa-fw fa-user-o"></i> Minha conta
+            </a>
+            <a class="dropdown-item" (click)="logout();" routerLinkActive="active">
+              <i class="fa fa-fw fa-sign-out"></i> Sair
+            </a>
+          </div>
+        </li>
+        <ng-template #login>
+            <li class="nav-link">
+                <a [routerLink]="['/login']" routerLinkActive="active">Faça o login</a>
+              </li>
+        </ng-template>
+    </ul>
   </div>
 </nav>
