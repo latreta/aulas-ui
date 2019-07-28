@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SalaService } from '../../service/sala.service';
 import { Sala, Bloco } from 'src/app/core/model';
-import { BlocoService } from 'src/app/core/services/bloco/bloco.service';
+import { BlocoService } from 'src/app/core/bloco/bloco.service';
 import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({

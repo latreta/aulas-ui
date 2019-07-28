@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { AuthService } from 'src/app/core/services/auth/auth.service';
-import { UserService } from 'src/app/core/services/user/user.service';
-import { TokenService } from 'src/app/core/services/token/token.service';
-import { Router, RouterState, ActivatedRoute } from '@angular/router';
-import { Route } from '@angular/compiler/src/core';
+import { UserService } from 'src/app/core/user/user.service';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/core/auth/auth.service';
+import { TokenService } from 'src/app/core/token/token.service';
 
 @Component({
     selector: 'app-signin',

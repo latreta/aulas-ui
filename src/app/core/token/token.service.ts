@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { UserService } from '../user/user.service';
 
 const TOKEN_KEY = 'X-ACCESS-TOKEN';
 
@@ -7,9 +6,6 @@ const TOKEN_KEY = 'X-ACCESS-TOKEN';
   providedIn: 'root'
 })
 export class TokenService {
-
-  constructor(){
-  }
 
   getToken(): string {
     return window.localStorage.getItem(TOKEN_KEY);

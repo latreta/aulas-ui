@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { User } from '../../model';
+import { User } from '../model';
 import { BehaviorSubject } from 'rxjs';
 import { TokenService } from '../token/token.service';
 import * as jtw_decode from 'jwt-decode';
@@ -13,6 +13,9 @@ export class UserService {
     private userName: string;
 
     constructor(private tokenService: TokenService) {
+        if (this.tokenService.hasToken()) {
+            this.decodeAndNotify();
+        }
     }
 
     getUser() {
@@ -26,6 +29,7 @@ export class UserService {
     decodeAndNotify() {
         const token = this.tokenService.getToken();
         const payload = jtw_decode(token);
+        this.userName = payload.name;
         this.userSubject.next(payload.name);
     }
 
@@ -37,6 +41,10 @@ export class UserService {
     logout() {
         this.tokenService.removeToken();
         this.userSubject.next(null);
+    }
+
+    isLogged() {
+        return this.tokenService.hasToken();
     }
 
 }

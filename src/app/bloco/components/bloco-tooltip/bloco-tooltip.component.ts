@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
-import { BlocoService } from '../../../core/services/bloco/bloco.service';
+import { BlocoService } from 'src/app/core/bloco/bloco.service';
 import { Bloco } from 'src/app/core/model';
 
 @Component({
@@ -12,7 +12,7 @@ export class BlocoTooltipComponent {
 
   private blocoForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, private blocoService: BlocoService) {
+  constructor(formBuilder: FormBuilder, private blocoService: BlocoService) {
     this.blocoForm = formBuilder.group({
       name: ''
     });
