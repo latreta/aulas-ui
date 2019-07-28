@@ -1,1 +1,5 @@
 <p>minha-conta works!</p>
+<h2 *ngIf="(user$ | async) as user; else login"> {{user.name}}</h2>
+<ng-template #login>
+    teste
+</ng-template>

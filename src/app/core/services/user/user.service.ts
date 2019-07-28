@@ -9,7 +9,7 @@ import * as jtw_decode from 'jwt-decode';
 })
 export class UserService {
 
-    private userSubject = new BehaviorSubject<User>({name: 'latreta', actions:[]});
+    private userSubject = new BehaviorSubject<User>(null);
     private userName: string;
 
     constructor(private tokenService: TokenService) {
@@ -23,11 +23,15 @@ export class UserService {
         return this.userName;
     }
 
-    private decodeAndNotify(){
+    decodeAndNotify() {
         const token = this.tokenService.getToken();
-        const user = jtw_decode(token) as User;
-        this.userName = user.name;
-        this.userSubject.next(user);
+        const payload = jtw_decode(token);
+        this.userSubject.next(payload.name);
+    }
+
+    setToken(token: string){
+        this.tokenService.setToken(token);
+        this.decodeAndNotify();
     }
 
     logout() {

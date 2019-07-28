@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from 'src/app/core/services/user/user.service';
+import { Observable } from 'rxjs';
+import { User } from 'src/app/core/model';
 
 @Component({
   selector: 'app-minha-conta',
@@ -7,7 +10,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MinhaContaComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
