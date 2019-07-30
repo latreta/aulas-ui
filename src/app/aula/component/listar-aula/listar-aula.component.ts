@@ -23,6 +23,10 @@ export class ListarAulaComponent implements OnInit {
     }, err => console.log(err));
   }
 
+  alterar(id: number){
+    console.log(this.aulas[id]);
+  }
+
   delete(id: number){
     console.log(this.aulas[id]);
   }
