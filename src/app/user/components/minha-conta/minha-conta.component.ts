@@ -10,7 +10,12 @@ import { User } from 'src/app/core/model';
 })
 export class MinhaContaComponent implements OnInit {
 
-  constructor() {
+  private user$: Observable<User>;
+  private userName: string;
+
+  constructor(private userService: UserService) {
+    this.user$ = this.userService.getUser();
+    this.userName = this.userService.getUserName();
   }
 
   ngOnInit() {

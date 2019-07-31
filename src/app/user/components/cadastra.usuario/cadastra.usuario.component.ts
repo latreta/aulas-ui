@@ -14,6 +14,7 @@ export class CadastraUsuarioComponent {
     constructor(private formBuilder: FormBuilder){
         this.usuarioForm = this.formBuilder.group({
             name: '',
+            lastname: '',
             email: ''
         });
     }

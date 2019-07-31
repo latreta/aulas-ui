@@ -2,8 +2,12 @@
     <form [formGroup]="usuarioForm" (ngSubmit)="cadastrar();">
         <div class="p-grid">
             <div class="p-col-7">
-                <label>Nome Completo:</label>
+                <label>Nome:</label>
                 <input type="text" formControlName="name"  />
+            </div>
+            <div class="p-col-7">
+                <label>Sobrenome:</label>
+                <input type="text" formControlName="lastname"  />
             </div>
             <div class="p-col-4">
                 <label>Email:</label>
