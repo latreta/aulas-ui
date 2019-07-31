@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { tap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { UserService } from '../user/user.service';
-import { User } from '../model';
+import { User } from '../user/user';
 
 @Injectable({
   providedIn: 'root'
@@ -26,8 +26,8 @@ export class AuthService {
 
   getInformation(): User {
     return {
-      name: 'Usuario logado',
-      actions: [{label: 'Minha conta', address: '/minhaconta'},
-      {label: 'Minhas aulas', address: '/aulas/minhas'}]};
+      id: 1,
+      name: 'Usuario logado'
+    };
   }
 }

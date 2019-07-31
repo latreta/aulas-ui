@@ -1,8 +1,3 @@
-export interface User {
-    name: string;
-    actions: Action[];
-}
-
 export interface Action {
     id?: number;
     label: string;

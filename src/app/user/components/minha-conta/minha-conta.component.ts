@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/core/user/user.service';
 import { Observable } from 'rxjs';
-import { User } from 'src/app/core/model';
+import { User } from 'src/app/core/user/user';
 
 @Component({
   selector: 'app-minha-conta',
