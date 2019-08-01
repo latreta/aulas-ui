@@ -5,3 +5,21 @@ td {
 .btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .show>.btn-secondary.dropdown-toggle {
     background-color:#7e2323!important;
 }
+
+.aulaBloco {
+    background-color:#ffffff;
+    height:70px;
+    padding:20px 5px;
+}
+
+@media (min-width: 401px){
+    .containerAulas {
+        padding: 1rem 2rem;
+    }
+}
+
+@media (max-width: 400px){
+    .jumbotron {
+        padding: 0.1rem 1rem;
+    }
+}

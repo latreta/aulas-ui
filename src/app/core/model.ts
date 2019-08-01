@@ -7,7 +7,7 @@ export interface Action {
 export interface Aula {
     id?: number;
     turma: string;
-    professor: Dicente;
+    discente: Discente;
     sala: Sala;
     cadeira: Cadeira;
     inicio: string;
@@ -35,7 +35,7 @@ export interface Bloco {
     name: string;
 }
 
-export interface Dicente {
+export interface Discente {
     id: number;
     name: string;
 }
