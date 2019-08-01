@@ -14,24 +14,27 @@ export class ListarAulaComponent implements OnInit {
   constructor(private aulaService: AulaService) { }
 
   ngOnInit() {
-    this.getAulas();
+    this.getAulasStub();
   }
 
   getAulas(): void {
+    this.aulaService.listarAulas().subscribe(response => {
+      this.aulas = response;
+    }, err => console.log(err));
+  }
+
+  getAulasStub(): void {
     this.aulas = [{
       id: 0,
       turma: 'BM',
-      discente: {id : 0, name : 'Teste'},
+      discente: {id : 0, name : 'Professor Teste'},
       sala: {id: 0, name: '8', bloco : {id : 0, name : 'b'}},
       cadeira: {
         id: 0,
         name: 'Calculo 4'
       },
       inicio : '07:10',
-      fim : '08:50'}]
-    // this.aulaService.listarAulas().subscribe(response => {
-    //   this.aulas = response;
-    // }, err => console.log(err));
+      fim : '08:50'}];
   }
 
   alterar(id: number){
