@@ -12,6 +12,10 @@ td {
     padding:20px 5px;
 }
 
+.containerAulas {
+    height: 660px;
+}
+
 @media (min-width: 401px){
     .containerAulas {
         padding: 1rem 2rem;

@@ -1,18 +1,23 @@
 <div class="container">
-    <div class="py-5 text-center">
+    <div class="py-2 text-center">
         <img class="d-block mx-auto mb-4" src="assets/UPE.png">
         <h2>Cadastre-se</h2>
         <p class="lead">
-            Lembrando, não é obrigatório o cadastro para visualizar as aulas que ocorrem, porém apenas usuários logados podem usufruir dos nossos benefícios.
+            Lembrando, não é obrigatório o cadastro para visualizar as aulas que ocorrem, porém apenas usuários logados
+            podem usufruir dos nossos benefícios.
         </p>
         <ul class="list-group collapse" id="collapseExample">
-                <li class="list-group-item active">Oferecemos as seguintes funcionalidades</li>
-                <li class="list-group-item">Assinatura de aulas.</li>
-                <li class="list-group-item">Avaliar professores por presença</li>
-                <li class="list-group-item">O aluno pode assinar uma aula que frequenta e receber notificações de quando uma aula se inicia, avisos do professor.[Mobile]</li>
-                <li class="list-group-item">O professor pode postar recados para uma determinada turma, possível mudança de sala, aula adiada, etc...[Mobile]</li>
-              </ul>
-        <p class="lead">Nosso sistema é experimental e contamos com seu uso para relatar sua experiência no nosso sistema e se possível feedbacks que nós ajude a melhorar ainda mais o sistema para você e futuros alunos e alunas.</p>
+            <li class="list-group-item active">Oferecemos as seguintes funcionalidades</li>
+            <li class="list-group-item">Assinatura de aulas.</li>
+            <li class="list-group-item">Avaliar professores por presença</li>
+            <li class="list-group-item">O aluno pode assinar uma aula que frequenta e receber notificações de quando uma
+                aula se inicia, avisos do professor.[Mobile]</li>
+            <li class="list-group-item">O professor pode postar recados para uma determinada turma, possível mudança de
+                sala, aula adiada, etc...[Mobile]</li>
+        </ul>
+        <p class="lead">Nosso sistema é experimental e contamos com seu uso para relatar sua experiência no nosso
+            sistema e se possível feedbacks que nós ajude a melhorar ainda mais o sistema para você e futuros alunos e
+            alunas.</p>
     </div>
 
     <div class="row">
@@ -20,14 +25,14 @@
             <h4 class="mb-3">Informações básicas</h4>
             <form class="needs-validation" novalidate="">
                 <div class="row">
-                    <div class="col-md-6 mb-3">
+                    <div class="col-md-7 mb-3">
                         <label for="firstName">Nome</label>
                         <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
                         <div class="invalid-feedback">
                             Valid first name is required.
                         </div>
                     </div>
-                    <div class="col-md-6 mb-3">
+                    <div class="col-md-5 mb-3">
                         <label for="lastName">Sobrenome</label>
                         <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
                         <div class="invalid-feedback">
@@ -36,15 +41,13 @@
                     </div>
                 </div>
 
-                <div class="mb-3">
-                    <label for="email">Email <span style="color:red;font-weight:bold;">*</span></label>
-                    <input type="email" class="form-control" id="email" placeholder="voce@poli.br">
-                    <div class="invalid-feedback">
-                        Please enter a valid email address for shipping updates.
+                <div class="row">
+                    <div class="col-md-7 mb-3">
+                        <label for="email">Email <span style="color:red;font-weight:bold;">*</span></label>
+                        <input type="email" class="form-control" id="email" placeholder="voce@poli.br">
                     </div>
-                </div>
 
-                <div class="mb-3">
+                    <div class="col-md-5 mb-3">
                         <label for="cpf">CPF</label>
                         <div class="input-group">
                             <input type="text" class="form-control" id="cpf" placeholder="CPF" required="">
@@ -53,22 +56,32 @@
                             </div>
                         </div>
                     </div>
-
-                <div class="mb-3">
-                    <label for="address">Rua/Logradouro</label>
-                    <input type="text" class="form-control" id="address" placeholder="Rua Benfica" required="">
-                    <div class="invalid-feedback">
-                        Por favor insira um endereço válido
-                    </div>
-                </div>
-
-                <div class="mb-3">
-                    <label for="address2">Complemento <span class="text-muted">(Opcional)</span></label>
-                    <input type="text" class="form-control" id="address2" placeholder="Apto 320, Bloco C">
                 </div>
 
                 <div class="row">
-                    <div class="col-md-5 mb-3">
+                    <div class="col-md-8 mb-3">
+                        <label for="address">Rua/Logradouro</label>
+                        <input type="text" class="form-control" id="address" placeholder="Rua Benfica" required="">
+                        <div class="invalid-feedback">
+                            Por favor insira um endereço válido
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                        <label for="zip">CEP:</label>
+                        <input type="text" class="form-control" id="zip" placeholder="99999-999" required="">
+                        <div class="invalid-feedback">
+                            CEP é obrigatório
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <label for="address2">Complemento <span class="text-muted">(Opcional)</span></label>
+                        <input type="text" class="form-control" id="address2" placeholder="Apto 320, Bloco C">
+                    </div>
+                    <div class="col-md-4 mb-3">
                         <label for="address2">Cidade</label>
                         <input type="text" class="form-control" id="address2" placeholder="ex: Recife, Olinda">
                     </div>
@@ -84,31 +97,21 @@
                             Escolha um turno
                         </div>
                     </div>
-                    <div class="col-md-3 mb-3">
-                        <label for="zip">CEP:</label>
-                        <input type="text" class="form-control" id="zip" placeholder="99999-999" required="">
-                        <div class="invalid-feedback">
-                            CEP é obrigatório
+                </div>
+                <hr class="mb-4">
+                <div class="row">
+                    <div class="col-md-12 mb-3">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="same-address">
+                            <label class="custom-control-label" for="same-address">Desejo receber emails com novidades
+                                do
+                                sistema, avisos de aulas.</label>
                         </div>
+                        <hr class="mb-4">
+                        <button class="btn btn-primary btn-lg btn-block" type="submit">Cadastrar-se</button>
                     </div>
                 </div>
-                <hr class="mb-4">
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="same-address">
-                    <label class="custom-control-label" for="same-address">Desejo receber emails com novidades do sistema, avisos de aulas.</label>
-                </div>
-                <hr class="mb-4">
-                <button class="btn btn-primary btn-lg btn-block" type="submit">Cadastrar-se</button>
             </form>
         </div>
     </div>
-
-    <footer class="my-5 pt-5 text-muted text-center text-small">
-        <p class="mb-1">© 2019 Universidade de Pernambuco</p>
-        <ul class="list-inline">
-            <li class="list-inline-item"><a href="#">Privacidade</a></li>
-            <li class="list-inline-item"><a href="#">Termos</a></li>
-            <li class="list-inline-item"><a href="#">Suporte</a></li>
-        </ul>
-    </footer>
 </div>

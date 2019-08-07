@@ -6,13 +6,13 @@
     <input type="email" id="inputEmail" class="form-control" formControlName="email" placeholder="Digite seu Email ou CPF" required="" autofocus="">
     <label for="inputPassword" class="sr-only">Senha:</label>
     <input type="password" id="inputPassword" class="form-control" formControlName="password" placeholder="Senha" required="">
-    <div class="checkbox mb-3">
+    <!-- <div class="checkbox mb-3">
       <label>
         <input type="checkbox" value="remember-me"> Continuar logado
       </label>
-    </div>
+    </div> -->
     <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
     <p>Não possui conta ainda? <a [routerLink]="['/cadastrar']" routerLinkActive="router-link-active" >Cadastra-se!</a></p>
-    <p class="mt-5 mb-3 text-muted">©PoliClass 2019</p>
+    <p class="mt-5 mb-3 text-muted text-center">©PoliClass 2019</p>
   </form>
 </div>
