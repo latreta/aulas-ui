@@ -5,8 +5,7 @@ import { User } from 'src/app/core/user/user';
 
 @Component({
   selector: 'app-minha-conta',
-  templateUrl: './minha-conta.component.html',
-  styleUrls: ['./minha-conta.component.css']
+  templateUrl: './minha-conta.component.html'
 })
 export class MinhaContaComponent implements OnInit {
 

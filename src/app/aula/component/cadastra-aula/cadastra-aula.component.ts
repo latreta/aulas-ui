@@ -5,8 +5,7 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 import { AulaService } from '../../service/aula.service';
 
 @Component({
-  templateUrl: './cadastra-aula.component.html',
-  styleUrls: ['./cadastra-aula.component.css']
+  templateUrl: './cadastra-aula.component.html'
 })
 export class CadastraAulaComponent implements OnInit {
 

@@ -5,8 +5,7 @@ import { BlocoService } from '../../../core/bloco/bloco.service';
 
 @Component({
   selector: 'app-cadastra-bloco',
-  templateUrl: './cadastra-bloco.component.html',
-  styleUrls: ['./cadastra-bloco.component.css']
+  templateUrl: './cadastra-bloco.component.html'
 })
 export class CadastraBlocoComponent {
 

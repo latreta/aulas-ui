@@ -6,8 +6,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-cadastra-sala',
-  templateUrl: './cadastra-sala.component.html',
-  styleUrls: ['./cadastra-sala.component.css']
+  templateUrl: './cadastra-sala.component.html'
 })
 export class CadastraSalaComponent implements OnInit {
 

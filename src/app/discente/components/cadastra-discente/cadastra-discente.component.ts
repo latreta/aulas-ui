@@ -5,8 +5,7 @@ import { Discente } from 'src/app/core/model';
 
 @Component({
   selector: 'app-cadastra-discente',
-  templateUrl: './cadastra-discente.component.html',
-  styleUrls: ['./cadastra-discente.component.css']
+  templateUrl: './cadastra-discente.component.html'
 })
 export class CadastraDiscenteComponent {
 

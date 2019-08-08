@@ -5,8 +5,7 @@ import { Bloco } from 'src/app/core/model';
 
 @Component({
   selector: 'app-bloco-tooltip',
-  templateUrl: './bloco-tooltip.component.html',
-  styleUrls: ['./bloco-tooltip.component.css']
+  templateUrl: './bloco-tooltip.component.html'
 })
 export class BlocoTooltipComponent {
 
