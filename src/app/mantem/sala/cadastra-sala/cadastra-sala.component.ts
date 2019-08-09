@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Sala, Bloco } from 'src/app/core/model';
 import { BlocoService } from 'src/app/core/bloco/bloco.service';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { SalaService } from 'src/app/core/sala.service';
+import { SalaService } from 'src/app/core/sala/sala.service';
 
 @Component({
   selector: 'app-cadastra-sala',

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { BlocoTooltipComponent } from './components/bloco-tooltip/bloco-tooltip.component';
+import { BlocoTooltipComponent } from './bloco-tooltip/bloco-tooltip.component';
 
 @NgModule({
     imports: [ReactiveFormsModule, FormsModule],

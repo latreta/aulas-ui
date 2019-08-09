@@ -21,10 +21,6 @@ const routes: Routes = [
   {
     path: 'controle',
     loadChildren: () => import('./mantem/mantem.module').then(mod => mod.MantemModule)
-  },
-  {
-    path: 'aulas',
-    loadChildren: () => import('./aula/aula.module').then(mod => mod.AulaModule)
   }
 ];
 

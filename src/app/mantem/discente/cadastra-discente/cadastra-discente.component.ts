@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DiscenteService } from '../../../core/discente.service';
+import { DiscenteService } from '../../../core/discente/discente.service';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Discente } from 'src/app/core/model';
 

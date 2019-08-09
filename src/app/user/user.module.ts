@@ -5,7 +5,7 @@ import { CommonModule } from '@angular/common';
 
 
 @NgModule({
-    declarations:[MinhaContaComponent],
+    declarations: [MinhaContaComponent],
     imports: [
         CommonModule,
         FormsModule,

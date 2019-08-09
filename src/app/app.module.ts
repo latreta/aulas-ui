@@ -6,15 +6,18 @@ import { HomeModule } from './home/home.module';
 import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
 import { AulaModule } from './aula/aula.module';
+import { AlertErrorComponent } from './shared/components/alert-error/alert-error.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
+    BrowserModule,
     UserModule,
     CoreModule,
-    BrowserModule,
+    SharedModule,
     HomeModule,
     AulaModule,
     AppRoutingModule

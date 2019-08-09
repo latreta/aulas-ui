@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Sala, Aula } from 'src/app/core/model';
 import { FormGroup, FormBuilder } from '@angular/forms';
-import { SalaService } from 'src/app/core/sala.service';
-import { AulaService } from 'src/app/core/aula.service';
+import { SalaService } from 'src/app/core/sala/sala.service';
+import { AulaService } from 'src/app/core/aula/aula.service';
 
 @Component({
   selector: 'app-cadastra-aula',

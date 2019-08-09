@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Aula } from 'src/app/core/model';
-import { AulaService } from 'src/app/core/aula.service';
+import { AulaService } from 'src/app/core/aula/aula.service';
 
 @Component({
   selector: 'app-listar-aula',
