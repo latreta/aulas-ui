@@ -15,10 +15,10 @@
                             required="">
                     </div>
                     <div class="col-md-4 mb-3">
-                            <label for="lastName">Turma</label>
-                            <input type="text" class="form-control" formControlName="turma" placeholder="BM, VM, CM..." value=""
-                                required="">
-                        </div>
+                        <label for="lastName">Turma</label>
+                        <input type="text" class="form-control" formControlName="turma" placeholder="BM, VM, CM..."
+                            value="" required="">
+                    </div>
                 </div>
 
                 <div class="row">
@@ -26,7 +26,8 @@
                         <label for="country">Sala</label>
                         <select class="form-control d-block w-100" required="" formControlName="sala">
                             <option value="">Escolha uma...</option>
-                            <option value="{{i}}" *ngFor="let sala of salas; let i = index">{{sala.bloco.name}}-{{sala.name}}
+                            <option value="{{i}}" *ngFor="let sala of salas; let i = index">
+                                {{sala.bloco.name}}-{{sala.name}}
                             </option>
                         </select>
                         <div class="invalid-feedback">

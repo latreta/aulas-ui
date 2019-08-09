@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Sala, Aula } from 'src/app/core/model';
-import { SalaService } from 'src/app/sala/service/sala.service';
 import { FormGroup, FormBuilder } from '@angular/forms';
-import { AulaService } from '../../service/aula.service';
+import { SalaService } from 'src/app/core/sala.service';
+import { AulaService } from 'src/app/core/aula.service';
 
 @Component({
+  selector: 'app-cadastra-aula',
   templateUrl: './cadastra-aula.component.html'
 })
 export class CadastraAulaComponent implements OnInit {

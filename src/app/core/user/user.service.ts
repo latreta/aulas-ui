@@ -43,7 +43,9 @@ export class UserService {
         this.userSubject.next(null);
     }
 
+
     isLogged() {
+        // TODO: Adicionar lógica para validar o token
         return this.tokenService.hasToken();
     }
 
