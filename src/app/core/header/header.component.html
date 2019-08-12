@@ -1,18 +1,30 @@
 <div class="row fixed-top bg-light pt-2 pb-2 d-flex">
-    <div class="col-6">
-        <a [routerLink]="['']">
-          <img src="assets/UPE.png" style="max-height:57px">
-        </a>
+  <div class="col-6">
+    <a [routerLink]="['']">
+      <img src="assets/UPE.png" style="max-height:57px">
+    </a>
+  </div>
+  <div class="col-6 text-right p-3" style="padding-right:2rem!important">
+    <div class="dropdown" *ngIf="(user$ | async) as user; else login">
+      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+        Olá, {{user}}
+      </button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item">Minhas aulas</a>
+        <a class="dropdown-item">Minha conta</a>
+        <a class="dropdown-item" (click)="logout()">Sair</a>
+      </div>
     </div>
-    <div class="col-6 text-right p-3" style="padding-right:2rem!important">
-        <div class="dropdown">
-            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-              Opções
-            </button>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" [routerLink]="['login']">Iniciar sessão</a>
-              <a class="dropdown-item"[routerLink]="['cadastrar']">Cadastrar-se</a>
-            </div>
-          </div>
-    </div>
+    <ng-template #login>
+      <div class="dropdown">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+          Opções
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" [routerLink]="['login']">Iniciar sessão</a>
+          <a class="dropdown-item" [routerLink]="['cadastrar']">Cadastrar-se</a>
+        </div>
+      </div>
+    </ng-template>
+  </div>
 </div>

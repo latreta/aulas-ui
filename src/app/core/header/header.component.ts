@@ -10,8 +10,6 @@ import { User } from '../user/user';
     templateUrl: './header.component.html'
 })
 export class HeaderComponent {
-
-    private usuario = '';
     private user$: Observable<User>;
     private actions = [];
 

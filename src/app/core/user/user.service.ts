@@ -41,11 +41,11 @@ export class UserService {
     logout() {
         this.tokenService.removeToken();
         this.userSubject.next(null);
+        this.userName = null;
     }
 
 
     isLogged() {
-        // TODO: Adicionar lógica para validar o token
         return this.tokenService.hasToken();
     }
 
