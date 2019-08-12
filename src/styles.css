@@ -8,3 +8,16 @@ body {
     height:auto;
     text-align:center;
 }
+
+.obrigatorio {
+    color: rgb(255,0,0)!important;
+    font-weight:bold;
+}
+
+.campoObrigatorio {
+    border: 1px solid red!important;
+}
+
+.campoObrigatorio ~ div {
+    color: rgb(255,0,0)!important;
+}
