@@ -3,6 +3,7 @@ import { BehaviorSubject } from 'rxjs';
 import { TokenService } from '../token/token.service';
 import * as jtw_decode from 'jwt-decode';
 import { User } from './user';
+import { Token } from '../model';
 
 @Injectable({
     providedIn: 'root'
@@ -28,9 +29,16 @@ export class UserService {
 
     decodeAndNotify() {
         const token = this.tokenService.getToken();
-        const payload = jtw_decode(token);
-        this.userName = payload.name;
-        this.userSubject.next(payload.name);
+        if(token != null){
+            const payload = jtw_decode(token);
+            const isValid = this.tokenService.isValidToken(token);        
+            if(isValid){
+                this.userName = payload.name;
+                this.userSubject.next(payload.name);
+            }else {
+                this.logout();
+            }
+        }        
     }
 
     setToken(token: string){

@@ -14,13 +14,13 @@ export class ListarAulaComponent implements OnInit {
   constructor(private aulaService: AulaService) { }
 
   ngOnInit() {
-    this.getAulasStub();
+    this.getAulas();
   }
 
   getAulas(): void {
     this.aulaService.listarAulas().subscribe(response => {
       this.aulas = response;
-    }, err => console.log(err));
+    }, err => console.log(err.error.message));
   }
 
   getAulasStub(): void {

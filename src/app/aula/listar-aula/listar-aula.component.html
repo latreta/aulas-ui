@@ -1,7 +1,7 @@
 <div>
     <h5 class="text-left">Acompanhe as aulas</h5>
     <div class="jumbotron containerAulas">
-        <div *ngIf="aulas.length > 0; else semAulas">
+        <div *ngIf="aulas?.length > 0; else semAulas">
             <div class="row card aulaBloco text-center" *ngFor="let aula of aulas; let i=index;">
                 <div class="col-2-md">
                     {{aula.turma}}
@@ -23,7 +23,7 @@
                 </div>
             </div>
         </div>
-        <ng-template>
+        <ng-template #semAulas>
             <div class="row card aulaBloco text-center">
                 Sem aulas ocorrendo no momento!
             </div>
