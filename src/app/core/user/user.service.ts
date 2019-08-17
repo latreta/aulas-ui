@@ -3,7 +3,8 @@ import { BehaviorSubject } from 'rxjs';
 import { TokenService } from '../token/token.service';
 import * as jtw_decode from 'jwt-decode';
 import { User } from './user';
-import { Token } from '../model';
+import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
     providedIn: 'root'
@@ -12,11 +13,20 @@ export class UserService {
 
     private userSubject = new BehaviorSubject<User>(null);
     private userName: string;
+    private endpointURL = environment.API_URL + 'users';
 
-    constructor(private tokenService: TokenService) {
+    constructor(private tokenService: TokenService, private http: HttpClient) {
         if (this.tokenService.hasToken()) {
             this.decodeAndNotify();
         }
+    }
+
+    signup(data: any) {
+        this.http.post(this.endpointURL, data)
+        .subscribe(
+            res => console.log(res),
+            err => console.log(err)
+        );
     }
 
     getUser() {

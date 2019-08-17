@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UserService } from 'src/app/core/user/user.service';
 
 @Component({
     selector: 'app-signup',
@@ -10,7 +11,7 @@ export class SignUpComponent {
     private signupForm: FormGroup;
     private msgError: string;
 
-    constructor(private formBuilder: FormBuilder) {
+    constructor(private formBuilder: FormBuilder, private userService: UserService) {
         this.setForm();
         this.msgError = null;
     }
@@ -23,6 +24,16 @@ export class SignUpComponent {
             lastName: ['', [
                 Validators.required
             ]],
+            sexo: ['', [
+                Validators.required
+            ]],
+            birthdate: ['', [
+                Validators.required
+            ]],
+            password: ['', [
+                Validators.required,
+                Validators.minLength(8)
+            ]],
             email: ['', [
                 Validators.required,
                 Validators.email
@@ -34,10 +45,13 @@ export class SignUpComponent {
             ]],
             cep: ['', [
                 Validators.required,
-                Validators.minLength(8),
-                Validators.maxLength(8)
+                Validators.minLength(9),
+                Validators.maxLength(9)
             ]],
             street: ['', [
+                Validators.required
+            ]],
+            neighborhood: ['', [
                 Validators.required
             ]],
             number: ['', [
@@ -49,12 +63,24 @@ export class SignUpComponent {
             shift: ['', [
                 Validators.required
             ]],
-            complement: [''],
-            newsletter: ['']
+            state: ['', [
+                Validators.required
+            ]],
+            ddd_1: ['', [
+                Validators.required
+            ]],
+            tel_1: ['', [
+                Validators.required
+            ]],
+            ddd_2: ['', []],
+            tel_2: ['',  []],
+            complement: ['',  []],
+            newsletter: ['',  []]
         });
+        console.log(this.signupForm);
     }
 
     cadastrar(): void {
-        console.log(this.signupForm.value);
+        this.userService.signup(this.signupForm.value);
     }
 }
