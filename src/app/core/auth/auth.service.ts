@@ -20,10 +20,6 @@ export class AuthService {
     }));
   }
 
-  logout(): void {
-    console.log('Logout');
-  }
-
   getInformation(): User {
     return {
       id: 1,

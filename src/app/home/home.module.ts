@@ -5,7 +5,6 @@ import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './component/home.component';
 import { CommonModule } from '@angular/common';
-import { HomeRoutingModule } from './component/home.routing.module';
 
 @NgModule({
     declarations: [

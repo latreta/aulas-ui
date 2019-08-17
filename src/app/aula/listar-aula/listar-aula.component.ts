@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Aula } from 'src/app/core/model';
-import { AulaService } from '../../service/aula.service';
+import { AulaService } from 'src/app/core/aula/aula.service';
 
 @Component({
   selector: 'app-listar-aula',
@@ -14,13 +14,13 @@ export class ListarAulaComponent implements OnInit {
   constructor(private aulaService: AulaService) { }
 
   ngOnInit() {
-    this.getAulasStub();
+    this.getAulas();
   }
 
   getAulas(): void {
     this.aulaService.listarAulas().subscribe(response => {
       this.aulas = response;
-    }, err => console.log(err));
+    }, err => console.log(err.error.message));
   }
 
   getAulasStub(): void {

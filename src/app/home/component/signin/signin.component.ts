@@ -13,6 +13,7 @@ import { TokenService } from 'src/app/core/token/token.service';
 export class SignInComponent {
 
     private loginForm: FormGroup;
+    private msgError: string;
 
     constructor(
         private formBuilder: FormBuilder, private route: Router,
@@ -30,7 +31,7 @@ export class SignInComponent {
             this.userService.decodeAndNotify();
             this.route.navigate(['']);
 
-        }, err => console.log(err));
+        }, err => this.msgError = err.error.message);
     }
 
 }
