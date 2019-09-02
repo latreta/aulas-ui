@@ -56,6 +56,11 @@ export class UserService {
         this.decodeAndNotify();
     }
 
+    isTokenValid(): boolean {
+        let token = this.tokenService.getToken();
+        return this.tokenService.isValidToken(token);
+    }
+
     logout() {
         this.tokenService.removeToken();
         this.userSubject.next(null);

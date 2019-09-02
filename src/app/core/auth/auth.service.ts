@@ -26,4 +26,8 @@ export class AuthService {
       name: 'Usuario logado'
     };
   }
+
+  isTokenValid(): boolean {
+    return this.userService.isTokenValid();
+  }
 }
