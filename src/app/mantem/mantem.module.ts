@@ -8,6 +8,7 @@ import { CadastraSalaComponent } from './sala/cadastra-sala/cadastra-sala.compon
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CadastraDiscenteComponent } from './discente/cadastra-discente/cadastra-discente.component';
 import { GerenciaComponent } from './gerencia/gerencia.component';
+import { MinhaContaComponent } from './minha-conta/minha-conta.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { GerenciaComponent } from './gerencia/gerencia.component';
     CadastraBlocoComponent,
     CadastraSalaComponent,
     CadastraDiscenteComponent,
-    GerenciaComponent
+    GerenciaComponent,
+    MinhaContaComponent
   ],
   imports: [
     CommonModule,

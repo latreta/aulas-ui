@@ -41,10 +41,9 @@ export class PoliClassHttp extends HttpClient {
     private realizaRequisicao<T>(fn: Function): Observable<T> {
         if (this.authService.isTokenValid()) {
           console.log('Requisição HTTP com access token inválido. Obtendo novo token...');
-    
-          const chamadaNovoAccessToken = '';
-    
-          return null;
+          
+
+          return fn();
         } else {
           return fn();
         }

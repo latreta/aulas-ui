@@ -5,6 +5,7 @@ import { CadastraSalaComponent } from './sala/cadastra-sala/cadastra-sala.compon
 import { CadastraBlocoComponent } from './bloco/cadastra-bloco/cadastra-bloco.component';
 import { CadastraDiscenteComponent } from './discente/cadastra-discente/cadastra-discente.component';
 import { GerenciaComponent } from './gerencia/gerencia.component';
+import { MinhaContaComponent } from './minha-conta/minha-conta.component';
 
 const routes: Routes = [
   {
@@ -24,6 +25,9 @@ const routes: Routes = [
   },
   {
     path: 'discentes', component: CadastraDiscenteComponent
+  },
+  {
+    path: 'minhaconta', component: MinhaContaComponent
   }
 ];
 

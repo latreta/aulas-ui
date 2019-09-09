@@ -1,33 +1,44 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { tap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { UserService } from '../user/user.service';
 import { User } from '../user/user';
+import { TokenService } from '../token/token.service';
+
+const endpointURL = `${environment.API_URL}oauth/`;
+const authorizationBasic = 'Basic ' + btoa('angular:latretajohnson');
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  constructor(private http: HttpClient, private userService: UserService) {
+  constructor(private http: HttpClient, private tokenService: TokenService) {
   }
 
-  login(email: string, password: string) {
-    return this.http.post<any>(`${environment.API_URL}auth`, {email, password})
-    .pipe(tap(res => {
-      this.userService.setToken(res.token);
-    }));
+  login(username: string, password: string) {
+    const headers = {
+      'Authorization': authorizationBasic,
+      'Content-type': 'application/x-www-form-urlencoded'
+
+    }
+    const body = new HttpParams()
+    .set('username', username)
+    .set('password', password)
+    .set('grant_type', 'password')
+    .set('client', 'angular');
+    return this.http.post<any>(endpointURL + 'token', body.toString() , { headers });
   }
 
   getInformation(): User {
     return {
-      id: 1,
-      name: 'Usuario logado'
+      name: 'Usuario logado',
+      authorities: ['ROLE_ADMIN']
     };
   }
 
   isTokenValid(): boolean {
-    return this.userService.isTokenValid();
+    return this.tokenService.isTokenValid();
   }
 }

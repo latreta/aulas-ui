@@ -27,10 +27,10 @@ export class SignInComponent {
 
     login() {
         this.authService.login(this.loginForm.value.email, this.loginForm.value.password).subscribe(response => {
-            this.tokenService.setToken(response.token);
+            this.tokenService.setToken(response.access_token);
+            this.tokenService.setRefreshToken(response.refresh_token);
             this.userService.decodeAndNotify();
             this.route.navigate(['']);
-
         }, err => this.msgError = err.error.message);
     }
 

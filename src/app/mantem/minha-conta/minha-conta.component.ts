@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/core/user/user.service';
-import { Observable } from 'rxjs';
-import { User } from 'src/app/core/user/user';
 
 @Component({
   selector: 'app-minha-conta',
@@ -9,15 +7,21 @@ import { User } from 'src/app/core/user/user';
 })
 export class MinhaContaComponent implements OnInit {
 
-  private user$: Observable<User>;
-  private userName: string;
 
   constructor(private userService: UserService) {
-    this.user$ = this.userService.getUser();
-    this.userName = this.userService.getUserName();
+    this.getAccountInformation();
   }
 
   ngOnInit() {
+  }
+
+  getAccountInformation(): void {
+    this.userService.retrieveLoggedUsersInfo()
+    .subscribe( res => {
+      console.log(res);
+    },
+    err => console.error(err)
+    );
   }
 
 }
