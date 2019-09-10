@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/core/user/user.service';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-minha-conta',
@@ -7,21 +8,47 @@ import { UserService } from 'src/app/core/user/user.service';
 })
 export class MinhaContaComponent implements OnInit {
 
+  private account: MyAccount;
+  private myAccountForm: FormGroup;
 
-  constructor(private userService: UserService) {
+  constructor(private userService: UserService, private formBuilder: FormBuilder) {
+  }
+
+  ngOnInit(): void {
+    this.myAccountForm = this.formBuilder.group({
+      firstName: [''],
+      lastName: [''],
+      email: [''],
+      password: [''],
+      endereco: this.formBuilder.group({
+        street: [''],
+        number: [''],
+        neighborhood: [''],
+        city: [''],
+        state: ['']
+      })
+
+    });
+
     this.getAccountInformation();
+    this.setFormValues();
   }
 
-  ngOnInit() {
-  }
-
-  getAccountInformation(): void {
+  getAccountInformation() {
     this.userService.retrieveLoggedUsersInfo()
-    .subscribe( res => {
-      console.log(res);
-    },
-    err => console.error(err)
-    );
+      .subscribe(res => {
+        this.account = res;
+      },
+        err => console.error(err)
+      );
+  }
+
+  atualizar() {
+    console.log(this.myAccountForm.value);
+  }
+
+  setFormValues() {
+    console.log(this.account);
   }
 
 }
