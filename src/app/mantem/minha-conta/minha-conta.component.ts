@@ -27,17 +27,16 @@ export class MinhaContaComponent implements OnInit {
         city: [''],
         state: ['']
       })
-
     });
 
     this.getAccountInformation();
-    this.setFormValues();
   }
 
   getAccountInformation() {
     this.userService.retrieveLoggedUsersInfo()
       .subscribe(res => {
         this.account = res;
+        this.setFormValues();
       },
         err => console.error(err)
       );
