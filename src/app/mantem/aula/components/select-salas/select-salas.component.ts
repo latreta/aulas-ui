@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { SalaService } from 'src/app/core/sala/sala.service';
+import { SelectItem } from 'primeng/components/common/selectitem';
+import { Sala } from 'src/app/core/model';
 
 @Component({
   selector: 'app-select-salas',
@@ -9,7 +11,7 @@ import { SalaService } from 'src/app/core/sala/sala.service';
 export class SelectSalasComponent implements OnInit {
 
   @Input() parentForm: FormGroup;
-  private salas: any[] = [];
+  private salas: SelectItem[] = [];
 
   constructor(private salasService: SalaService) { }
 
@@ -20,7 +22,7 @@ export class SelectSalasComponent implements OnInit {
   getSalas(): void {
     this.salasService.getSalas().subscribe(
       response => {
-        response.forEach((element: any) => {
+        response.forEach((element: Sala) => {
           this.salas.push({label: element.bloco.name + element.name, value: element});
         });
       },

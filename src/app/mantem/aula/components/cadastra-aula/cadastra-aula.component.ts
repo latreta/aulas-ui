@@ -26,7 +26,7 @@ export class CadastraAulaComponent implements OnInit {
 
   ngOnInit() {
     this.aulaForm = this.formBuilder.group({
-      name: [''],
+      cadeira: [''],
       discente: [''],
       turma: [''],
       sala: [''],

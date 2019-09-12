@@ -5,8 +5,7 @@
             <form class="needs-validation" [formGroup]="aulaForm" (ngSubmit)="cadastrar();">
                 <div class="row">
                     <div class="col-md-4 mb-3">
-                        <label for="firstName">Cadeira</label>
-                        <input type="text" pInputText formControlName="name" />
+                        <app-select-cadeiras [parentForm]="aulaForm"></app-select-cadeiras>
                     </div>
                     <div class="col-md-4 mb-3">
                         <app-select-discentes [parentForm]="aulaForm"></app-select-discentes>
@@ -23,11 +22,11 @@
                     </div>
                     <div class="col-md-4 mb-4">
                         <label for="horario">Começa às</label>
-                        <p-dropdown [options]="horarios" [(formControlName)]="inicio" filter="true"></p-dropdown>
+                        <p-dropdown [options]="horarios" formControlName="inicio" filter="true" emptyFilterMessage="Sem resultados"></p-dropdown>
                     </div>
                     <div class="col-md-4 mb-4">
                         <label for="horario">Termina às</label>
-                        <p-dropdown [options]="horariosFim" [(formControlName)]="fim" filter="true"></p-dropdown>
+                        <p-dropdown [options]="horariosFim" formControlName="fim" filter="true" emptyFilterMessage="Sem resultados"></p-dropdown>
                     </div>
                 </div>
                 <hr class="mb-4">
