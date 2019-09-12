@@ -21,3 +21,7 @@ body {
 .campoObrigatorio ~ div {
     color: rgb(255,0,0)!important;
 }
+
+label {
+    display: block!important;
+}

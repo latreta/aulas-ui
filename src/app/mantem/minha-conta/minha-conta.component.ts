@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/core/user/user.service';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-minha-conta',
@@ -16,16 +16,16 @@ export class MinhaContaComponent implements OnInit {
 
   ngOnInit(): void {
     this.myAccountForm = this.formBuilder.group({
-      firstName: [''],
-      lastName: [''],
-      email: [''],
-      password: [''],
+      firstName: ['', Validators.required],
+      lastName: ['', Validators.required],
+      email: ['', Validators.required],
+      password: ['', []],
       endereco: this.formBuilder.group({
-        street: [''],
-        number: [''],
-        neighborhood: [''],
-        city: [''],
-        state: ['']
+        street: ['', Validators.required],
+        number: ['', Validators.required],
+        neighborhood: ['', Validators.required],
+        city: ['', Validators.required],
+        state: ['' , Validators.required]
       })
     });
 
@@ -47,7 +47,19 @@ export class MinhaContaComponent implements OnInit {
   }
 
   setFormValues() {
-    console.log(this.account);
+    this.myAccountForm.setValue({
+      firstName: this.account.name,
+      lastName: this.account.lastName,
+      email: this.account.email,
+      endereco: {
+        street: this.account.endereco.rua,
+        number: this.account.endereco.numero,
+        neighborhood: this.account.endereco.bairro,
+        city: this.account.endereco.cidade,
+        state: this.account.endereco.estado
+      },
+      password: null
+    });
   }
 
 }

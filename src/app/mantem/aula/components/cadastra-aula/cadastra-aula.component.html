@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row text-center">
+        <div class="col-md-8 order-md-1" style="margin:30px auto;">
+            <h4 class="mb-3">Cadastro de aula</h4>
+            <form class="needs-validation" [formGroup]="aulaForm" (ngSubmit)="cadastrar();">
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <label for="firstName">Cadeira</label>
+                        <input type="text" pInputText formControlName="name" />
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <app-select-discentes [parentForm]="aulaForm"></app-select-discentes>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="turma">Turma</label>
+                        <input type="text" pInputText formControlName="turma" placeholder="BM, VM, CM..." />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <app-select-salas [parentForm]="aulaForm"></app-select-salas>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <label for="horario">Começa às</label>
+                        <p-dropdown [options]="horarios" [(formControlName)]="inicio" filter="true"></p-dropdown>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <label for="horario">Termina às</label>
+                        <p-dropdown [options]="horariosFim" [(formControlName)]="fim" filter="true"></p-dropdown>
+                    </div>
+                </div>
+                <hr class="mb-4">
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+</div>

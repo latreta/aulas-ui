@@ -11,7 +11,6 @@ export class DiscenteService {
 
     private endpointURL = `${environment.API_URL}discentes`;
     constructor(private http: HttpClient) {
-        console.log('discentes service started');
     }
 
     cadastrar(discente: Discente): Observable<Discente> {

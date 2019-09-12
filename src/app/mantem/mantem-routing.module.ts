@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { CadastraAulaComponent } from './aula/cadastra-aula/cadastra-aula.component';
+import { CadastraAulaComponent } from './aula/components/cadastra-aula/cadastra-aula.component';
 import { CadastraSalaComponent } from './sala/cadastra-sala/cadastra-sala.component';
 import { CadastraBlocoComponent } from './bloco/cadastra-bloco/cadastra-bloco.component';
 import { CadastraDiscenteComponent } from './discente/cadastra-discente/cadastra-discente.component';
