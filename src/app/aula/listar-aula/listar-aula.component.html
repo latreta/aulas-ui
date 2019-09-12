@@ -4,16 +4,16 @@
         <div *ngIf="aulas?.length > 0; else semAulas">
             <div class="row card aulaBloco text-center" *ngFor="let aula of aulas; let i=index;">
                 <div class="col-2-md">
-                    {{aula.turma}}
+                    Turma {{aula.turma | uppercase}}
                 </div>
                 <div class="col-2-md">
-                    {{aula.cadeira.name}}
+                    {{aula.disciplina.name}}
                 </div>
-                <div class="col-2-md">
+                <div class="col-2-md capitalize">
                     {{aula.discente.name}}
                 </div>
-                <div class="col-2-md text-capitalize">
-                    {{aula.sala.bloco.name}}{{aula.sala.name}}
+                <div class="col-2-md">
+                    {{aula.sala.bloco.name | uppercase }}{{aula.sala.name  | uppercase }}
                 </div>
                 <div class="col-2-md">
                     {{aula.inicio}} até {{aula.fim}}

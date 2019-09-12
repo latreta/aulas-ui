@@ -26,7 +26,7 @@ export class CadastraAulaComponent implements OnInit {
 
   ngOnInit() {
     this.aulaForm = this.formBuilder.group({
-      cadeira: [''],
+      disciplina: [''],
       discente: [''],
       turma: [''],
       sala: [''],
@@ -53,12 +53,16 @@ export class CadastraAulaComponent implements OnInit {
       { label: '20:30', value: '20:30' },
       { label: '21:20', value: '21:20' }
     ];
-    this.horariosFim = this.horarios;
+    this.horariosFim = Array.from(this.horarios);
     this.horariosFim.push({ label: '22:10', value: '22:10' });
   }
 
   cadastrar(): void {
     console.log(this.aulaForm.value);
+    this.aulaService.cadastrar(this.aulaForm.value as Aula)
+    .subscribe(response => {
+      alert('Sucesso');
+    }, err => console.log(err));
   }
 
 }

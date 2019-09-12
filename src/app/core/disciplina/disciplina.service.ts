@@ -9,7 +9,7 @@ import { environment } from 'src/environments/environment';
 })
 export class DisciplinaService {
 
-  private endpointURL = `${environment.API_URL}cadeiras`;
+  private endpointURL = `${environment.API_URL}disciplinas`;
 
   constructor(private http: HttpClient) { }
 

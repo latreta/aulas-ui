@@ -22,7 +22,6 @@ export class SelectCadeirasComponent implements OnInit {
   getDisciplinas(){
     this.disciplinaService.listarDisciplinas()
     .subscribe(response => {
-      console.log(response);
       response.forEach((element: Cadeira) => {
         this.disciplinas.push({label: element.name, value: element});
       })

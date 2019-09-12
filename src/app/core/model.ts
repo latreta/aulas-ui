@@ -17,7 +17,7 @@ export interface Aula {
     turma: string;
     discente: Discente;
     sala: Sala;
-    cadeira: Cadeira;
+    disciplina: Disciplina;
     inicio: string;
     fim: string;
 }
@@ -27,7 +27,7 @@ export interface Horario {
     minute: string;
 }
 
-export interface Cadeira {
+export interface Disciplina {
     id: number;
     name: string;
 }
