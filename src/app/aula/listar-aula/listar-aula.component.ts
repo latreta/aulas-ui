@@ -29,7 +29,7 @@ export class ListarAulaComponent implements OnInit {
       turma: 'BM',
       discente: {id : 0, name : 'Professor Teste'},
       sala: {id: 0, name: '8', bloco : {id : 0, name : 'b'}},
-      cadeira: {
+      disciplina: {
         id: 0,
         name: 'Calculo 4'
       },

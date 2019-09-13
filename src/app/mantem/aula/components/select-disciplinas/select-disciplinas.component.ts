@@ -2,13 +2,13 @@ import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { DisciplinaService } from 'src/app/core/disciplina/disciplina.service';
 import { SelectItem } from 'primeng/components/common/selectitem';
-import { Aula, Cadeira } from 'src/app/core/model';
+import { Disciplina } from 'src/app/core/model';
 
 @Component({
-  selector: 'app-select-cadeiras',
-  templateUrl: './select-cadeiras.component.html'
+  selector: 'app-select-disciplinas',
+  templateUrl: './select-disciplinas.component.html'
 })
-export class SelectCadeirasComponent implements OnInit {
+export class SelectDisciplinasComponent implements OnInit {
 
   @Input() parentForm: FormGroup;
   private disciplinas: SelectItem[] = [];
@@ -22,7 +22,7 @@ export class SelectCadeirasComponent implements OnInit {
   getDisciplinas(){
     this.disciplinaService.listarDisciplinas()
     .subscribe(response => {
-      response.forEach((element: Cadeira) => {
+      response.forEach((element: Disciplina) => {
         this.disciplinas.push({label: element.name, value: element});
       })
     },err => console.log(err));

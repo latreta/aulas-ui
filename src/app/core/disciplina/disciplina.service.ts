@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Aula, Cadeira } from 'src/app/core/model';
+import {Disciplina } from 'src/app/core/model';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
@@ -13,8 +13,8 @@ export class DisciplinaService {
 
   constructor(private http: HttpClient) { }
 
-  listarDisciplinas(): Observable<Cadeira[]> {
-    return this.http.get<Cadeira[]>(this.endpointURL);
+  listarDisciplinas(): Observable<Disciplina[]> {
+    return this.http.get<Disciplina[]>(this.endpointURL);
   }
 
 }

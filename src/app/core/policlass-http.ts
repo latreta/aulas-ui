@@ -3,10 +3,12 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { AuthService } from './auth/auth.service';
 
+export class NotAuthenticatedError {}
+
 @Injectable()
 export class PoliClassHttp extends HttpClient {
     
-    constructor(private authService: AuthService, private httpHandler: HttpHandler){
+    constructor(private authService: AuthService, httpHandler: HttpHandler){
         super(httpHandler);
     }
   
@@ -39,10 +41,12 @@ export class PoliClassHttp extends HttpClient {
     }
 
     private realizaRequisicao<T>(fn: Function): Observable<T> {
-        if (this.authService.isTokenValid()) {
+        if (!this.authService.isTokenValid()) {
           console.log('Requisição HTTP com access token inválido. Obtendo novo token...');
-          
-
+          this.authService.getNewAccessToken();
+          if(!this.authService.isTokenValid){
+            throw new NotAuthenticatedError();
+          }
           return fn();
         } else {
           return fn();

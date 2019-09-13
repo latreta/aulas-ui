@@ -13,7 +13,7 @@ import {InputTextModule} from 'primeng/inputtext';
 import { CadastraAulaComponent } from './aula/components/cadastra-aula/cadastra-aula.component';
 import { SelectSalasComponent } from './aula/components/select-salas/select-salas.component';
 import { SelectDiscentesComponent } from './aula/components/select-discentes/select-discentes.component';
-import { SelectCadeirasComponent } from './aula/components/select-cadeiras/select-cadeiras.component';
+import { SelectDisciplinasComponent } from './aula/components/select-disciplinas/select-disciplinas.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +25,7 @@ import { SelectCadeirasComponent } from './aula/components/select-cadeiras/selec
     MinhaContaComponent,
     SelectSalasComponent,
     SelectDiscentesComponent,
-    SelectCadeirasComponent
+    SelectDisciplinasComponent
   ],
   imports: [
     CommonModule,

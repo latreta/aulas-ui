@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Sala, Aula, Discente } from 'src/app/core/model';
+import { Aula } from 'src/app/core/model';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { SalaService } from 'src/app/core/sala/sala.service';
 import { AulaService } from 'src/app/core/aula/aula.service';
-import { DiscenteService } from 'src/app/core/discente/discente.service';
 import { SelectItem } from 'primeng/components/common/selectitem';
 
 export interface Opcao {
