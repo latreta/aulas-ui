@@ -13,7 +13,8 @@ td {
 }
 
 .containerAulas {
-    height: 660px;
+    height: 600px;
+    overflow-y:scroll!important;
 }
 
 @media (min-width: 401px){
