@@ -3,6 +3,8 @@ import { Sala, Bloco } from 'src/app/core/model';
 import { BlocoService } from 'src/app/core/bloco/bloco.service';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { SalaService } from 'src/app/core/sala/sala.service';
+import { Router } from '@angular/router';
+import { MessageService } from 'primeng/components/common/messageservice';
 
 @Component({
   selector: 'app-cadastra-sala',
@@ -14,7 +16,12 @@ export class CadastraSalaComponent implements OnInit {
   private blocos: Bloco[];
   private salaForm: FormGroup;
 
-  constructor(private salaService: SalaService, private blocoService: BlocoService, private formBuilder: FormBuilder) {
+  constructor(
+    private router: Router,
+    private messageService: MessageService,
+    private salaService: SalaService,
+    private blocoService: BlocoService,
+    private formBuilder: FormBuilder) {
     this.salaForm = this.formBuilder.group({
       name: '',
       bloco: ''
@@ -32,9 +39,11 @@ export class CadastraSalaComponent implements OnInit {
   cadastrar(): void {
     const sala: Sala = this.salaForm.value as Sala;
     sala.bloco = this.blocos[this.salaForm.value.bloco];
-    this.salaService.cadastra(sala).subscribe(() => {
-      console.log('Sucesso!');
-    } ,err => console.log(err));
+    this.salaService.cadastra(sala).subscribe(
+      () => {
+        this.messageService.add({severity:'success', summary:'Service Message', detail:'Via MessageService'});
+        this.router.navigate(['/controle']);
+    } , err => console.log(err));
   }
 
   listarSalas(): void {

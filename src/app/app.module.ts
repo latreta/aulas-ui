@@ -7,6 +7,8 @@ import { CoreModule } from './core/core.module';
 import { AulaModule } from './aula/aula.module';
 import { SharedModule } from './shared/shared.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { MessageService } from 'primeng/components/common/messageservice';
+import { ToastModule } from 'primeng/toast';
 
 @NgModule({
   declarations: [
@@ -15,13 +17,14 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    CoreModule,
+    CoreModule,    
+    ToastModule,
     SharedModule,
     HomeModule,
     AulaModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

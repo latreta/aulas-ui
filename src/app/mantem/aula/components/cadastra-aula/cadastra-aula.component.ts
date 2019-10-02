@@ -19,6 +19,8 @@ export class CadastraAulaComponent implements OnInit {
   horarios: SelectItem[] = [];
   horariosFim: SelectItem[] = [];
 
+  display: boolean = false;
+
   constructor(private formBuilder: FormBuilder, private aulaService: AulaService) {    
   }
 
@@ -53,6 +55,10 @@ export class CadastraAulaComponent implements OnInit {
     ];
     this.horariosFim = Array.from(this.horarios);
     this.horariosFim.push({ label: '22:10', value: '22:10' });
+  }
+
+  showDialog() {
+    this.display = true;
   }
 
   cadastrar(): void {

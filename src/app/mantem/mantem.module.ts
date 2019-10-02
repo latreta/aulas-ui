@@ -14,6 +14,11 @@ import { CadastraAulaComponent } from './aula/components/cadastra-aula/cadastra-
 import { SelectSalasComponent } from './aula/components/select-salas/select-salas.component';
 import { SelectDiscentesComponent } from './aula/components/select-discentes/select-discentes.component';
 import { SelectDisciplinasComponent } from './aula/components/select-disciplinas/select-disciplinas.component';
+import {PanelModule} from 'primeng/panel';
+import {DialogModule} from 'primeng/dialog';
+import {ToastModule} from 'primeng/toast';
+import { Message } from '@angular/compiler/src/i18n/i18n_ast';
+import { MessageService } from 'primeng/components/common/messageservice';
 
 @NgModule({
   declarations: [
@@ -30,6 +35,8 @@ import { SelectDisciplinasComponent } from './aula/components/select-disciplinas
   imports: [
     CommonModule,
     FormsModule,
+    PanelModule,
+    DialogModule,
     ReactiveFormsModule,
     MantemRoutingModule,
     DropdownModule,

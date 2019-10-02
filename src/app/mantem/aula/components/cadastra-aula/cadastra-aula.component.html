@@ -22,16 +22,24 @@
                     </div>
                     <div class="col-md-4 mb-4">
                         <label for="horario">Começa às</label>
-                        <p-dropdown [options]="horarios" formControlName="inicio" placeholder="Escolha um horário" filter="true" emptyFilterMessage="Sem resultados"></p-dropdown>
+                        <p-dropdown [options]="horarios" formControlName="inicio" placeholder="Escolha um horário"
+                            filter="true" emptyFilterMessage="Sem resultados"></p-dropdown>
                     </div>
                     <div class="col-md-4 mb-4">
                         <label for="horario">Termina às</label>
-                        <p-dropdown [options]="horariosFim" formControlName="fim" placeholder="Escolha um horário"  filter="true" emptyFilterMessage="Sem resultados"></p-dropdown>
+                        <p-dropdown [options]="horariosFim" formControlName="fim" placeholder="Escolha um horário"
+                            filter="true" emptyFilterMessage="Sem resultados"></p-dropdown>
                     </div>
                 </div>
                 <hr class="mb-4">
-                <button class="btn btn-lg btn-primary btn-block" type="submit">Cadastrar</button>
+                <button class="btn btn-lg btn-danger btn-block" type="submit">Cadastrar</button>
             </form>
         </div>
     </div>
 </div>
+
+<p-dialog header="Novo bloco" [(visible)]="display">
+    <app-cadastra-bloco></app-cadastra-bloco>
+</p-dialog>
+    
+<button type="button" class="btn btn-lg btn-danger btn-block" (click)="showDialog()" pButton icon="pi pi-info-circle" >Mostrar</button>
