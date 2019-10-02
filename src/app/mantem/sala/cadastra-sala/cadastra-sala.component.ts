@@ -41,7 +41,7 @@ export class CadastraSalaComponent implements OnInit {
     sala.bloco = this.blocos[this.salaForm.value.bloco];
     this.salaService.cadastra(sala).subscribe(
       () => {
-        this.messageService.add({severity:'success', summary:'Service Message', detail:'Via MessageService'});
+        this.messageService.add({severity:'success', summary:'Sala cadastrada', detail:'Sala cadastrada com sucesso'});
         this.router.navigate(['/controle']);
     } , err => console.log(err));
   }

@@ -3,6 +3,8 @@ import { Aula } from 'src/app/core/model';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { AulaService } from 'src/app/core/aula/aula.service';
 import { SelectItem } from 'primeng/components/common/selectitem';
+import { MessageService } from 'primeng/components/common/messageservice';
+import { Router } from '@angular/router';
 
 export interface Opcao {
   label: string;
@@ -21,7 +23,11 @@ export class CadastraAulaComponent implements OnInit {
 
   display: boolean = false;
 
-  constructor(private formBuilder: FormBuilder, private aulaService: AulaService) {    
+  constructor(
+    private formBuilder: FormBuilder,
+    private aulaService: AulaService,
+    private messageService: MessageService,
+    private router: Router) {    
   }
 
   ngOnInit() {
@@ -65,7 +71,8 @@ export class CadastraAulaComponent implements OnInit {
     console.log(this.aulaForm.value);
     this.aulaService.cadastrar(this.aulaForm.value as Aula)
     .subscribe(response => {
-      alert('Sucesso');
+      this.messageService.add({severity: 'success', summary: 'Aula cadastrada', detail: 'A aula foi cadastrada com sucesso.' });
+      this.router.navigate(['/controle']);
     }, err => console.log(err));
   }
 
