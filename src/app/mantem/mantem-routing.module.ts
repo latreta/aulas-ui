@@ -6,6 +6,7 @@ import { CadastraBlocoComponent } from './bloco/cadastra-bloco/cadastra-bloco.co
 import { CadastraDiscenteComponent } from './discente/cadastra-discente/cadastra-discente.component';
 import { GerenciaComponent } from './gerencia/gerencia.component';
 import { MinhaContaComponent } from './minha-conta/minha-conta.component';
+import { ListaDiscenteComponent } from './discente/lista-discente/lista-discente.component';
 
 const routes: Routes = [
   {
@@ -24,7 +25,10 @@ const routes: Routes = [
     path: 'blocos', component: CadastraBlocoComponent
   },
   {
-    path: 'discentes', component: CadastraDiscenteComponent
+    path: 'discentes', children: [
+      {path: '', component: ListaDiscenteComponent},
+      {path: 'cadastrar', component: CadastraDiscenteComponent}
+    ]
   },
   {
     path: 'minhaconta', component: MinhaContaComponent

@@ -19,6 +19,10 @@ import {DialogModule} from 'primeng/dialog';
 import {ToastModule} from 'primeng/toast';
 import { Message } from '@angular/compiler/src/i18n/i18n_ast';
 import { MessageService } from 'primeng/components/common/messageservice';
+import {MessagesModule} from 'primeng/messages';
+import {MessageModule} from 'primeng/message';
+import { ListaDiscenteComponent } from './discente/lista-discente/lista-discente.component';
+
 
 @NgModule({
   declarations: [
@@ -30,13 +34,16 @@ import { MessageService } from 'primeng/components/common/messageservice';
     MinhaContaComponent,
     SelectSalasComponent,
     SelectDiscentesComponent,
-    SelectDisciplinasComponent
+    SelectDisciplinasComponent,
+    ListaDiscenteComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
     PanelModule,
     DialogModule,
+    MessagesModule,
+    MessageModule,
     ReactiveFormsModule,
     MantemRoutingModule,
     DropdownModule,

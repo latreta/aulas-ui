@@ -10,9 +10,9 @@
         Olá, {{user.name}}
       </button>
       <div class="dropdown-menu">
-        <a class="dropdown-item">Minhas aulas</a>
+        <!-- <a class="dropdown-item">Minhas aulas</a> -->
         <a class="dropdown-item" [routerLink]="[ 'controle/minhaconta']">Minha conta</a>
-        <a class="dropdown-item" [routerLink]="[ 'controle']">Controle</a>
+        <a class="dropdown-item" [routerLink]="[ 'controle']">Gerenciamento</a>
         <a class="dropdown-item" (click)="logout()">Sair</a>
       </div>
     </div>
