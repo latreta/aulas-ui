@@ -22,6 +22,7 @@ import { MessageService } from 'primeng/components/common/messageservice';
 import {MessagesModule} from 'primeng/messages';
 import {MessageModule} from 'primeng/message';
 import { ListaDiscenteComponent } from './discente/lista-discente/lista-discente.component';
+import { TabelaDiscenteComponent } from './discente/lista-discente/tabela-discente/tabela-discente.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { ListaDiscenteComponent } from './discente/lista-discente/lista-discente
     SelectSalasComponent,
     SelectDiscentesComponent,
     SelectDisciplinasComponent,
-    ListaDiscenteComponent
+    ListaDiscenteComponent,
+    TabelaDiscenteComponent
   ],
   imports: [
     CommonModule,

@@ -2,22 +2,6 @@
     <a class="btn btn-danger btn-lg" [routerLink]="[ '/controle/discentes/cadastrar' ]">Novo discente</a>
 </div>
 
-<div class="row m-2">
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">Nome</th>
-                <th scope="col" class="text-right">#</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let discente of discentes;">
-                <td>{{discente.name}}</td>
-                <td class="text-right">
-                    <button>Alterar</button>
-                    <button>Excluir</button>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+<app-tabela-discente class="row m-2" [discentes]="discentes">
+    Por favor aguarde
+</app-tabela-discente>
