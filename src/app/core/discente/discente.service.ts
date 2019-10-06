@@ -17,6 +17,10 @@ export class DiscenteService {
         return this.http.post<Discente>(this.endpointURL, discente);
     }
 
+    remover(id: number): Observable<any>{
+        return this.http.delete<any>(`${this.endpointURL}/${id}`);
+    }
+
     listar(): Observable<Discente[]> {
         return this.http.get<Discente[]>(this.endpointURL);
     }

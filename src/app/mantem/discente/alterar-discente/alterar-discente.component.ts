@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { DiscenteService } from 'src/app/core/discente/discente.service';
 import { Discente } from 'src/app/core/model';
+import { MessageService } from 'primeng/components/common/messageservice';
 
 @Component({
   selector: 'app-alterar-discente',
-  templateUrl: './alterar-discente.component.html',
-  styleUrls: ['./alterar-discente.component.css']
+  templateUrl: './alterar-discente.component.html'
 })
 export class AlterarDiscenteComponent implements OnInit {
 
@@ -16,7 +16,9 @@ export class AlterarDiscenteComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private activateRoute: ActivatedRoute,
-    private discenteService: DiscenteService
+    private discenteService: DiscenteService,
+    private messageService: MessageService,
+    private route: Router    
     ) { }
 
   ngOnInit() {
@@ -42,6 +44,12 @@ export class AlterarDiscenteComponent implements OnInit {
   }
 
   atualizar(){
+    let discente = this.discenteForm.value as Discente;
+    this.discenteService.cadastrar(discente)
+    .subscribe(response => {
+      this.messageService.add({severity: 'success', summary: 'Discente atualizado', detail: 'O discente foi atualizado.'});
+      this.route.navigate(['/controle/discentes']);
+    }, err => console.log(err));
   }
 
 }
