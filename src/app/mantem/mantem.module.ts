@@ -23,6 +23,7 @@ import {MessagesModule} from 'primeng/messages';
 import {MessageModule} from 'primeng/message';
 import { ListaDiscenteComponent } from './discente/lista-discente/lista-discente.component';
 import { TabelaDiscenteComponent } from './discente/lista-discente/tabela-discente/tabela-discente.component';
+import { AlterarDiscenteComponent } from './discente/alterar-discente/alterar-discente.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { TabelaDiscenteComponent } from './discente/lista-discente/tabela-discen
     SelectDiscentesComponent,
     SelectDisciplinasComponent,
     ListaDiscenteComponent,
-    TabelaDiscenteComponent
+    TabelaDiscenteComponent,
+    AlterarDiscenteComponent
   ],
   imports: [
     CommonModule,

@@ -7,10 +7,10 @@
     </thead>
     <tbody>
         <tr *ngFor="let discente of discentes;">
-            <td>{{discente.name}}</td>
+            <td style="vertical-align: middle;">{{discente.name}}</td>
             <td class="text-right">
-                <button>Alterar</button>
-                <button>Excluir</button>
+                <button (click)="alterarDiscente(discente.id);" class="btn btn-secondary btn-lg"><i class="fa fa-pencil"></i></button>
+                <button (click)="removerDiscente(discente.id);" class="btn btn-secondary btn-lg ml-2"><i class="fa fa-trash"></i></button>
             </td>
         </tr>
     </tbody>

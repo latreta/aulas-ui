@@ -7,6 +7,7 @@ import { CadastraDiscenteComponent } from './discente/cadastra-discente/cadastra
 import { GerenciaComponent } from './gerencia/gerencia.component';
 import { MinhaContaComponent } from './minha-conta/minha-conta.component';
 import { ListaDiscenteComponent } from './discente/lista-discente/lista-discente.component';
+import { AlterarDiscenteComponent } from './discente/alterar-discente/alterar-discente.component';
 
 const routes: Routes = [
   {
@@ -27,7 +28,8 @@ const routes: Routes = [
   {
     path: 'discentes', children: [
       {path: '', component: ListaDiscenteComponent},
-      {path: 'cadastrar', component: CadastraDiscenteComponent}
+      {path: 'cadastrar', component: CadastraDiscenteComponent},
+      {path: 'alterar/:id', component: AlterarDiscenteComponent}
     ]
   },
   {

@@ -1,8 +1,10 @@
 <div class="container text-center pt-5">
-    <h4>Cadastrar Dicente</h4>
-    <form class="needs-validation" [formGroup]="discenteForm" (ngSubmit)="cadastrar()">
+    <h4>Editando Discente</h4>
+    {{discente}}
+    <form class="needs-validation" [formGroup]="discenteForm" (ngSubmit)="atualizar()">
         <div class="row">
             <div class="col-md-8 order-md-1" style="margin: 5px auto;">
+                <input type="hidden" formControlName="id">
                 <label for="">Nome do Discente</label>
                 <input type="text" formControlName="name" class="form-control">
             </div>
@@ -10,7 +12,7 @@
         <div class="row">
             <div class="col-md-8" style="margin: 5px auto;">
                 <hr class="mb-4">
-                <button class="btn btn-danger btn-lg btn-block">Cadastrar</button>
+                <button class="btn btn-danger btn-lg btn-block">Alterar</button>
             </div>
         </div>
     </form>

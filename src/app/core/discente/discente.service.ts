@@ -20,4 +20,8 @@ export class DiscenteService {
     listar(): Observable<Discente[]> {
         return this.http.get<Discente[]>(this.endpointURL);
     }
+
+    detalharPorId(id: number){
+        return this.http.get<Discente>(`${this.endpointURL}/${id}`);
+    }
 }
