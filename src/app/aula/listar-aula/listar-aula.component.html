@@ -1,32 +1,23 @@
-<div>
-    <h5 class="text-left">Acompanhe as aulas</h5>
-    <div class="jumbotron containerAulas">
-        <div *ngIf="aulas?.length > 0; else semAulas">
-            <div class="row card aulaBloco text-center" *ngFor="let aula of aulas; let i=index;">
-                <div class="col-2-md">
-                    Turma {{aula.turma | uppercase}}
-                </div>
-                <div class="col-2-md">
-                    {{aula.disciplina.name}}
-                </div>
-                <div class="col-2-md capitalize">
-                    {{aula.discente.name}}
-                </div>
-                <div class="col-2-md">
-                    {{aula.sala.bloco.name | uppercase }}{{aula.sala.name  | uppercase }}
-                </div>
-                <div class="col-2-md">
-                    {{aula.inicio}} até {{aula.fim}}
-                </div>
-                <div class="col-2-md pr-4 text-right">
-                    <a><i class="fa fa-fw fa-ellipsis-v"></i></a>
-                </div>
-            </div>
-        </div>
-        <ng-template #semAulas>
-            <div class="row card aulaBloco text-center">
-                Sem aulas ocorrendo no momento!
-            </div>
-        </ng-template>
-    </div>
-</div>
+<h3>Aulas ocorrendo</h3>
+
+<p-table [columns]="cols" [value]="aulas" [responsive]="true" styleClass="text-center">
+    <ng-template pTemplate="header" let-columns>
+        <tr>
+            <th *ngFor="let col of columns">
+                    {{col.header}}
+            </th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-aula>
+        <tr>
+            <td>{{aula.turma}}</td>
+            <td>{{aula.discente.name | titlecase}}</td>
+            <td>{{aula.disciplina.name}}</td>
+            <td>{{aula.sala.bloco.name}}{{aula.sala.name}}</td>
+            <td>{{aula.inicio | date: 'HH:mm'}} até {{aula.fim}}</td>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="summary">
+        Estão ocorrendo {{aulas?.length}} aulas.
+    </ng-template>
+</p-table>
