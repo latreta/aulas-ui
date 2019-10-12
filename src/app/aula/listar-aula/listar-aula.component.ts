@@ -10,12 +10,12 @@ import { AulaService } from 'src/app/core/aula/aula.service';
 export class ListarAulaComponent implements OnInit {
 
   private aulas: Aula[];
-  private cols: any[];
+  cols: any[];
 
   constructor(private aulaService: AulaService) { }
 
   ngOnInit() {
-    this.getAulas();
+    this.getAulasStub();
     this.cols = [
       { field: 'turma', header: 'Turma' },
       { field: 'discente', header: 'Discente'},
@@ -32,17 +32,14 @@ export class ListarAulaComponent implements OnInit {
   }
 
   getAulasStub(): void {
-    this.aulas = [{
-      id: 0,
-      turma: 'BM',
-      discente: {id : 0, name : 'Professor Teste'},
-      sala: {id: 0, name: '8', bloco : {id : 0, name : 'b'}},
-      disciplina: {
-        id: 0,
-        name: 'Calculo 4'
-      },
-      inicio : '07:10',
-      fim : '08:50'}];
+    this.aulaService.listarAulasStub()
+    .subscribe((response: Aula[]) => {
+      this.aulas = response;
+    },err => console.log(err));
+  }
+
+  getAulasEmptyStub(): void {
+    this.aulas = [];
   }
 
   alterar(id: number){

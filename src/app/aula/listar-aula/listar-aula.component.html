@@ -1,6 +1,6 @@
 <h3>Aulas ocorrendo</h3>
 
-<p-table [columns]="cols" [value]="aulas" [responsive]="true" styleClass="text-center">
+<p-table [columns]="cols" [value]="aulas" [scrollable]="true" scrollHeight="600px" [responsive]="true" styleClass="text-center">
     <ng-template pTemplate="header" let-columns>
         <tr>
             <th *ngFor="let col of columns">
@@ -15,6 +15,13 @@
             <td>{{aula.disciplina.name}}</td>
             <td>{{aula.sala.bloco.name}}{{aula.sala.name}}</td>
             <td>{{aula.inicio | date: 'HH:mm'}} até {{aula.fim}}</td>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="emptymessage" let-columns>
+        <tr>
+            <td [attr.colspan]="columns.length">
+                Não existem aulas ocorrendo no momento.
+            </td>
         </tr>
     </ng-template>
     <ng-template pTemplate="summary">

@@ -18,8 +18,10 @@ export interface Aula {
     discente: Discente;
     sala: Sala;
     disciplina: Disciplina;
-    inicio: string;
+    inicio: Date;
     fim: string;
+    createdAt: string,
+    updatedAt: string,
 }
 
 export interface Horario {
@@ -30,6 +32,8 @@ export interface Horario {
 export interface Disciplina {
     id: number;
     name: string;
+    createdAt: Date;
+    updatedAt: Date;
 }
 
 export interface Sala {
