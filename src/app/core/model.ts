@@ -18,10 +18,10 @@ export interface Aula {
     discente: Discente;
     sala: Sala;
     disciplina: Disciplina;
-    inicio: Date;
-    fim: string;
-    createdAt: string,
-    updatedAt: string,
+    inicio: any;
+    fim: any;
+    createdAt: any,
+    updatedAt: any,
 }
 
 export interface Horario {
@@ -32,22 +32,28 @@ export interface Horario {
 export interface Disciplina {
     id: number;
     name: string;
-    createdAt: Date;
-    updatedAt: Date;
+    createdAt: any;
+    updatedAt: any;
 }
 
 export interface Sala {
     id: number;
     name: string;
     bloco: Bloco;
+    createdAt: any;
+    updatedAt: any;
 }
 
 export interface Bloco {
     id: number;
     name: string;
+    createdAt: any;
+    updatedAt: any;
 }
 
 export interface Discente {
     id: number;
     name: string;
+    createdAt: any;
+    updatedAt: any;
 }

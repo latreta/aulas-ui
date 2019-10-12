@@ -1,18 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild} from '@angular/core';
 import { Aula } from 'src/app/core/model';
 import { AulaService } from 'src/app/core/aula/aula.service';
+import { $ } from 'protractor';
 
 @Component({
   selector: 'app-listar-aula',
   templateUrl: './listar-aula.component.html',
-  styleUrls: ['./listar-aula-table.css','./listar-aula.component.css'],
+  styleUrls: ['./listar-aula.component.css'],
 })
 export class ListarAulaComponent implements OnInit {
 
   private aulas: Aula[];
   cols: any[];
-
-  constructor(private aulaService: AulaService) { }
+  color: string;
+  sentido: number = 1;
+  
+  constructor(private aulaService: AulaService) {
+  }
 
   ngOnInit() {
     this.getAulasStub();
@@ -20,9 +24,33 @@ export class ListarAulaComponent implements OnInit {
       { field: 'turma', header: 'Turma' },
       { field: 'discente', header: 'Discente'},
       { field: 'disciplina', header: 'Disciplina' },
-      { field: 'sala', fieldOp: 'sala.name', header: 'Sala' },
+      { field: 'sala', header: 'Sala' },
       { field: 'inicio', header: 'Horário' }
     ];
+    this.color = 'blue';
+    
+  }
+
+  ngAfterViewInit(): void {
+    //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
+    //Add 'implements AfterViewInit' to the class.
+    let elementos = document.getElementById("listadeaulas");
+    if(elementos != undefined){
+      setInterval(() => this.autoScroll(elementos), 200);
+    }
+    else{
+      console.log("Undefined");
+    }
+  }
+
+  private autoScroll(elementos){
+    const amount = 5;  
+    let alturaAtual = elementos.scrollTop;
+    elementos.scrollTo(0, elementos.scrollTop + amount * this.sentido);    
+    let proximaAltura = elementos.scrollTop;
+    if(proximaAltura == alturaAtual){
+      this.sentido *= -1;
+    }    
   }
 
   getAulas(): void {
