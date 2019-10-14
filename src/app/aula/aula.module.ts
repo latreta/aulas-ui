@@ -6,11 +6,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ListarAulaComponent } from './listar-aula/listar-aula.component';
 import {TableModule} from 'primeng/table';
 import { ScrollableTable } from '../shared/directives/scrollable-table';
+import { TabelaAulasComponent } from './listar-aula/tabela-aulas/tabela-aulas.component';
 
 @NgModule({
     declarations: [
         ListarAulaComponent,
-        ScrollableTable
+        ScrollableTable,
+        TabelaAulasComponent
     ],
     imports: [
         CommonModule,

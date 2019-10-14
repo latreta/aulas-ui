@@ -25,7 +25,7 @@ export class CadastraDiscenteComponent {
     .subscribe(
       () => {
         this.messageService.add({severity:'success', summary:'Discente cadastrado', detail:'Discente foi cadastrado com sucesso.'});
-        this.router.navigate(['/controle']);
+        this.router.navigate(['/controle/discentes']);
       }, err => console.log(err));
   }
 
