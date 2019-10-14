@@ -14,6 +14,7 @@ export class ListarAulaComponent implements OnInit {
   cols: any[];
   color: string;
   sentido: number = 1;
+  isAutoScrollEnabled = true;
   
   constructor(private aulaService: AulaService) {
   }
@@ -31,6 +32,10 @@ export class ListarAulaComponent implements OnInit {
     
   }
 
+  public setScroll(value: boolean){
+    this.isAutoScrollEnabled = value;
+  }
+
   ngAfterViewInit(): void {
     //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
     //Add 'implements AfterViewInit' to the class.
@@ -46,11 +51,14 @@ export class ListarAulaComponent implements OnInit {
   private autoScroll(elementos){
     const amount = 5;  
     let alturaAtual = elementos.scrollTop;
-    elementos.scrollTo(0, elementos.scrollTop + amount * this.sentido);    
-    let proximaAltura = elementos.scrollTop;
-    if(proximaAltura == alturaAtual){
-      this.sentido *= -1;
-    }    
+    if(this.isAutoScrollEnabled){
+      elementos.scrollTo(0, elementos.scrollTop + amount * this.sentido);    
+      let proximaAltura = elementos.scrollTop;
+      if(proximaAltura == alturaAtual){
+        this.sentido *= -1;
+      }    
+    }
+    
   }
 
   getAulas(): void {
