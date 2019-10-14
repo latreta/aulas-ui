@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { DiscenteService } from '../../../core/discente/discente.service';
 import { FormGroup, FormBuilder } from '@angular/forms';
-import { Discente } from 'src/app/core/model';
+
 import { MessageService } from 'primeng/components/common/messageservice';
 import { Router } from '@angular/router';
+import { Discente } from 'src/app/core/models/discente';
 
 @Component({
   selector: 'app-cadastra-discente',

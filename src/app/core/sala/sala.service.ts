@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Sala } from 'src/app/core/model';
 import { environment } from 'src/environments/environment';
+import { Sala } from '../models/sala';
 
 @Injectable({
     providedIn: 'root'

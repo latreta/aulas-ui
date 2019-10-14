@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Aula } from 'src/app/core/model';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { AulaService } from 'src/app/core/aula/aula.service';
 import { SelectItem } from 'primeng/components/common/selectitem';
 import { MessageService } from 'primeng/components/common/messageservice';
 import { Router } from '@angular/router';
+import { Aula } from 'src/app/core/models/aula';
 
 export interface Opcao {
   label: string;
@@ -18,7 +18,6 @@ export interface Opcao {
 export class CadastraAulaComponent implements OnInit {
 
   private aulaForm: FormGroup;
-  horarios: SelectItem[] = [];
   horariosFim: SelectItem[] = [];
 
   display: boolean = false;
@@ -40,7 +39,7 @@ export class CadastraAulaComponent implements OnInit {
       fim: ['']
     });
 
-    this.horarios = [
+    this.horariosFim = [
       { label: '07:10', value: '07:10' },
       { label: '08:00', value: '08:00' },
       { label: '08:50', value: '08:50' },
@@ -57,10 +56,9 @@ export class CadastraAulaComponent implements OnInit {
       { label: '18:50', value: '18:50' },
       { label: '19:40', value: '19:40' },
       { label: '20:30', value: '20:30' },
-      { label: '21:20', value: '21:20' }
+      { label: '21:20', value: '21:20' },
+      { label: '22:10', value: '22:10' }
     ];
-    this.horariosFim = Array.from(this.horarios);
-    this.horariosFim.push({ label: '22:10', value: '22:10' });
   }
 
   showDialog() {
@@ -70,7 +68,7 @@ export class CadastraAulaComponent implements OnInit {
   cadastrar(): void {
     console.log(this.aulaForm.value);
     this.aulaService.cadastrar(this.aulaForm.value as Aula)
-    .subscribe(response => {
+    .subscribe(() => {
       this.messageService.add({severity: 'success', summary: 'Aula cadastrada', detail: 'A aula foi cadastrada com sucesso.' });
       this.router.navigate(['/controle']);
     }, err => console.log(err));

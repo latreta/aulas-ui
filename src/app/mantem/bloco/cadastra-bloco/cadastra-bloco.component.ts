@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { BlocoService } from 'src/app/core/bloco/bloco.service';
-import { Bloco } from 'src/app/core/model';
 import { Router } from '@angular/router';
 import { MessageService } from 'primeng/components/common/messageservice';
+import { Bloco } from 'src/app/core/models/bloco';
 
 @Component({
   selector: 'app-cadastra-bloco',

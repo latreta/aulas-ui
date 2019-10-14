@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { SalaService } from 'src/app/core/sala/sala.service';
 import { SelectItem } from 'primeng/components/common/selectitem';
-import { Sala } from 'src/app/core/model';
+import { Sala } from 'src/app/core/models/sala';
 
 @Component({
   selector: 'app-select-salas',

@@ -1,4 +1,5 @@
-import { Aula } from '../model';
+import { Aula } from '../models/aula';
+
 
 export const AULAS: Aula[] = [
     {

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DiscenteService } from 'src/app/core/discente/discente.service';
-import { Discente } from 'src/app/core/model';
+import { Discente } from 'src/app/core/models/discente';
+
 
 @Component({
   selector: 'app-lista-discente',

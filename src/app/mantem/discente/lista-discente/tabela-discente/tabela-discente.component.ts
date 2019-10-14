@@ -1,8 +1,8 @@
 import { Component, Input } from '@angular/core';
-import { Discente } from 'src/app/core/model';
 import { Router } from '@angular/router';
 import { DiscenteService } from 'src/app/core/discente/discente.service';
 import { MessageService } from 'primeng/components/common/messageservice';
+import { Discente } from 'src/app/core/models/discente';
 
 @Component({
   selector: 'app-tabela-discente',

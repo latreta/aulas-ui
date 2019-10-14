@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DiscenteService } from 'src/app/core/discente/discente.service';
-import { Discente } from 'src/app/core/model';
 import { MessageService } from 'primeng/components/common/messageservice';
+import { Discente } from 'src/app/core/models/discente';
 
 @Component({
   selector: 'app-alterar-discente',

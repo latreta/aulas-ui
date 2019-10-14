@@ -2,7 +2,8 @@ import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { DisciplinaService } from 'src/app/core/disciplina/disciplina.service';
 import { SelectItem } from 'primeng/components/common/selectitem';
-import { Disciplina } from 'src/app/core/model';
+import { Disciplina } from 'src/app/core/models/disciplina';
+
 
 @Component({
   selector: 'app-select-disciplinas',

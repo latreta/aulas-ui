@@ -1,7 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { DiscenteService } from 'src/app/core/discente/discente.service';
-import { Discente } from 'src/app/core/model';
+import { Discente } from 'src/app/core/models/discente';
+
 
 @Component({
   selector: 'app-select-discentes',

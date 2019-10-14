@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
-import { Aula } from 'src/app/core/model';
+
 import { Observable, of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 
+import { Aula } from '../models/aula';
 import {AULAS} from './mock-aulas';
+
 
 @Injectable({
   providedIn: 'root'

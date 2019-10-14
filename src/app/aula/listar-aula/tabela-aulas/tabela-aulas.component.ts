@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Aula } from 'src/app/core/model';
+import { Aula } from 'src/app/core/models/aula';
+
 
 @Component({
   selector: 'app-tabela-aulas',
