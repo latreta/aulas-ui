@@ -9,6 +9,7 @@ import { SharedModule } from './shared/shared.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MessageService } from 'primeng/components/common/messageservice';
 import { ToastModule } from 'primeng/toast';
+import { LoginGuard } from './core/auth/guards/login.guard';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { ToastModule } from 'primeng/toast';
     AulaModule,
     AppRoutingModule
   ],
-  providers: [MessageService],
+  providers: [MessageService, LoginGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

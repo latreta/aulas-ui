@@ -3,7 +3,6 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { User } from '../user/user';
 import { TokenService } from '../token/token.service';
-import { Observable } from 'rxjs';
 
 const endpointURL = `${environment.API_URL}oauth/`;
 const authorizationBasic = 'Basic ' + btoa('angular:latretajohnson');

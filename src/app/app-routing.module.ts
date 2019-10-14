@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ListarAulaComponent } from './aula/listar-aula/listar-aula.component';
 import { SignInComponent } from './home/component/signin/signin.component';
 import { SignUpComponent } from './home/component/signup/signup.component';
+import { LoginGuard } from './core/auth/guards/login.guard';
 
 const routes: Routes = [
   {
@@ -12,11 +13,13 @@ const routes: Routes = [
   },
   {
     path: 'login',
-    component: SignInComponent
+    component: SignInComponent,
+    canActivate: [LoginGuard]
   },
   {
     path: 'cadastrar',
-    component: SignUpComponent
+    component: SignUpComponent,
+    canActivate: [LoginGuard]
   },
   {
     path: 'controle',

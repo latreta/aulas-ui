@@ -1,5 +1,5 @@
 import { CanActivate, Router, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
-import { UserService } from '../user/user.service';
+import { UserService } from '../../user/user.service';
 import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 
