@@ -5,6 +5,11 @@ import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './component/home.component';
 import { CommonModule } from '@angular/common';
+import {InputTextModule} from 'primeng/inputtext';
+import {CalendarModule} from 'primeng/calendar';
+import {DropdownModule} from 'primeng/dropdown';
+import {InputMaskModule} from 'primeng/inputmask';
+import {PasswordModule} from 'primeng/password';
 
 @NgModule({
     declarations: [
@@ -15,8 +20,13 @@ import { CommonModule } from '@angular/common';
     imports: [
         CommonModule,
         FormsModule,
-        ReactiveFormsModule,
-        RouterModule
+        ReactiveFormsModule,        
+        RouterModule,
+        InputTextModule,
+        DropdownModule,
+        CalendarModule,
+        InputMaskModule,
+        PasswordModule
     ],
     providers: []
 })

@@ -1,3 +1,14 @@
-<div class="list-group p-4" id="listadeaulas" style="height:600px;padding:20px 0;overflow-y:scroll;" (mouseout)="setScroll(true);" (mouseover)="setScroll(false);">
-    <a href="#" class="list-group-item list-group-item-action" *ngFor="let aula of aulas; let i = index">{{i + 1}} {{aula.disciplina.name}} </a>
+<div *ngIf="!aulas.empty; else listaVazia" class="list-group p-4" id="listadeaulas"
+    style="height:600px;padding:20px 0;overflow-y:scroll;" (mouseout)="setScroll(true);"
+    (mouseover)="setScroll(false);">
+    <a href="#" class="list-group-item list-group-item-action" *ngFor="let aula of aulas; let i = index">{{i + 1}}
+        {{aula.disciplina.name}} </a>
 </div>
+
+<ng-template #listaVazia>
+    <div class="list-group p-4" style="height:600px;padding:20px 0;overflow-y:scroll;">
+        <a href="#" class="list-group-item list-group-item-action">
+            Não existem aulas ocorrendo no momento.
+        </a>
+    </div>
+</ng-template>

@@ -1,15 +1,19 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserService } from 'src/app/core/user/user.service';
+import { SelectItem } from 'primeng/components/common/selectitem';
 
 @Component({
     selector: 'app-signup',
-    templateUrl: './signup.component.html'
+    templateUrl: './signup.component.html',
+    styleUrls: ['./signup.component.css']
 })
 export class SignUpComponent {
 
     private signupForm: FormGroup;
-    private msgError: string;
+    msgError: string;
+    genders: SelectItem[] = [];
+    shifts: SelectItem[] = [];
 
     constructor(private formBuilder: FormBuilder, private userService: UserService) {
         this.setForm();
@@ -17,6 +21,16 @@ export class SignUpComponent {
     }
 
     setForm(): void {
+        this.genders = [
+            {label: 'Masculino', value: 'masculino'},
+            {label: 'Feminino', value: 'feminino'},
+            {label: 'Não quero informar', value: 'ndesc'}
+        ];
+        this.shifts = [
+            {label: 'Manhã', value: 'manha'},
+            {label: 'Tarde', value: 'tarde'},
+            {label: 'Noite', value: 'noite'}
+        ]
         this.signupForm = this.formBuilder.group({
             firstName: ['', [
                 Validators.required
@@ -24,7 +38,7 @@ export class SignUpComponent {
             lastName: ['', [
                 Validators.required
             ]],
-            sexo: ['', [
+            gender: ['', [
                 Validators.required
             ]],
             birthdate: ['', [
