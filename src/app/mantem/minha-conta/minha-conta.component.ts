@@ -43,7 +43,10 @@ export class MinhaContaComponent implements OnInit {
   }
 
   atualizar() {
-    console.log(this.myAccountForm.value);
+    this.userService.signup(this.myAccountForm.value)
+    .subscribe(res => {
+      console.log(res);
+    }, err => console.log(err));
   }
 
   setFormValues() {

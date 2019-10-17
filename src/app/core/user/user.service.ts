@@ -21,12 +21,8 @@ export class UserService {
         }
     }
 
-    signup(data: any) {
-        this.http.post(this.endpointURL, data)
-        .subscribe(
-            res => console.log(res),
-            err => console.log(err)
-        );
+    signup(data: any): Observable<any> {
+        return this.http.post(this.endpointURL, data);
     }
 
     getUser() {
