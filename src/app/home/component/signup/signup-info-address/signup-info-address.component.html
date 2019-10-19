@@ -1,0 +1,37 @@
+<h4 class="mb-3">{{title}}</h4>
+<div class="row">
+    <div class="col-md-3 mb-3">
+        <label for="cep">CEP: <span class="obrigatorio">*</span></label>
+        <p-inputMask mask="99999-999" id="cep" placeholder="00000-000" formControlName="cep">
+        </p-inputMask>
+    </div>
+    <div class="col-md-3 mb-3">
+        <label for="address">Rua/Logradouro:</label>
+        <input type="text" pInputText id="address" placeholder="Rua Benfica" formControlName="street">
+    </div>
+    <div class="col-md-3 mb-3">
+        <label for="neighborhood">Bairro:</label>
+        <input pInputText type="text" id="neighborhood" formControlName="neighborhood">
+    </div>
+    <div class="col-md-3 mb-3">
+        <label for="number">Número:</label>
+        <p-inputMask id="number" formControlName="number" placeholder="9999999" mask="9999999">
+        </p-inputMask>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4 mb-3">
+        <label for="complement">Complemento <span class="text-muted">(Opcional)</span></label>
+        <input type="text" pInputText class="form-control" id="complement" placeholder="Apto 320, Bloco C"
+            formControlName="complement">
+    </div>
+    <div class="col-md-4 mb-3">
+        <label for="city">Cidade</label>
+        <input type="text" class="form-control" id="city" placeholder="ex: Recife, Olinda" formControlName="city">
+    </div>
+    <div class="col-md-4 mb-3">
+        <label for="state">Estado</label>
+        <input type="text" pInputText class="form-control" id="state" placeholder="ex: PE, PB" formControlName="state">
+    </div>
+</div>

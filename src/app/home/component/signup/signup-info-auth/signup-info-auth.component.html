@@ -1,0 +1,21 @@
+<h4 class="mb-3">{{title}}</h4>
+<div class="row">
+    <div class="col-md-4 mb-3">
+        <label for="email">Email: <span class="obrigatorio">*</span></label>
+        <input type="email" pInputText class="form-control" id="email" placeholder="voce@poli.br"
+            formControlName="email">
+    </div>
+
+    <div class="col-md-4 mb-3">
+        <label for="password">Senha: <span class="obrigatorio">*</span></label>
+        <input pPassword type="password" class="form-control" id="password" formControlName="password">
+    </div>
+
+    <div class="col-md-4 mb-3">
+        <label for="cpf">CPF: <span class="obrigatorio">*</span></label>
+        <div class="input-group">
+            <p-inputMask mask="999.999.999-99" id="cpf" placeholder="000.000.000-00" formControlName="cpf">
+            </p-inputMask>
+        </div>
+    </div>
+</div>
