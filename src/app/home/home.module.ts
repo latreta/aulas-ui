@@ -10,11 +10,17 @@ import {CalendarModule} from 'primeng/calendar';
 import {DropdownModule} from 'primeng/dropdown';
 import {InputMaskModule} from 'primeng/inputmask';
 import {PasswordModule} from 'primeng/password';
+import { SignupInfoBasicComponent } from './component/signup/signup-info-basic/signup-info-basic.component';
+import { SignupInfoAuthComponent } from './component/signup/signup-info-auth/signup-info-auth.component';
+import { SignupInfoAddressComponent } from './component/signup/signup-info-address/signup-info-address.component';
 
 @NgModule({
     declarations: [
         SignInComponent,
         SignUpComponent,
+        SignupInfoBasicComponent,
+        SignupInfoAuthComponent,
+        SignupInfoAddressComponent,
         HomeComponent
     ],
     imports: [
