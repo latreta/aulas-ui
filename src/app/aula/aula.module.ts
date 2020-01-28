@@ -7,6 +7,7 @@ import { ListarAulaComponent } from './listar-aula/listar-aula.component';
 import {TableModule} from 'primeng/table';
 import { ScrollableTable } from '../shared/directives/scrollable-table';
 import { TabelaAulasComponent } from './listar-aula/tabela-aulas/tabela-aulas.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
     declarations: [
@@ -20,7 +21,8 @@ import { TabelaAulasComponent } from './listar-aula/tabela-aulas/tabela-aulas.co
         FormsModule,
         TableModule,
         HttpClientModule,        
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        SharedModule
     ],
     exports: [ListarAulaComponent]
 })

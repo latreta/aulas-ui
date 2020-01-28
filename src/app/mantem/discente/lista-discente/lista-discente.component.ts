@@ -19,7 +19,7 @@ export class ListaDiscenteComponent implements OnInit {
   }
 
   getDiscentes() {
-    this.discenteService.listar().subscribe(response => {
+    this.discenteService.listarDiscentesStub().subscribe(response => {
       this.discentes = response;
     }, err => console.log(err));
   }

@@ -21,7 +21,7 @@ export class AulaService {
     return this.http.get<Aula[]>(this.endpointURL);
   }
 
-  listarAulasStub(): Observable<Aula[]>{
+  listarAulasStub(): Observable<Aula[]> {
     return of(AULAS);
   }
 

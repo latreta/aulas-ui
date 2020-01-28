@@ -1,0 +1,21 @@
+button {
+    padding: 8px 16px;
+    margin: 5px;
+    font-size: 16px;
+    background-color: #FFF;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-family: sans-serif;
+}
+
+.success {
+    background-color: #28a745;
+    border-color: #28a745;
+    color: #FFF;
+}
+
+.danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color: #FFF;
+}

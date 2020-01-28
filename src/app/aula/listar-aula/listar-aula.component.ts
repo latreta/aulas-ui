@@ -2,6 +2,7 @@ import { Component, OnInit} from '@angular/core';
 
 import { AulaService } from 'src/app/core/aula/aula.service';
 import { Aula } from 'src/app/core/models/aula';
+import { Option } from 'src/app/shared/components/poli-select/poli-select.component';
 
 @Component({
   selector: 'app-listar-aula',
@@ -10,12 +11,14 @@ import { Aula } from 'src/app/core/models/aula';
 export class ListarAulaComponent implements OnInit {
 
   private aulas: Aula[] = [];
+  private opcoes: Option[] = [{label: 'Teste', value: '1'}];
   
   constructor(private aulaService: AulaService) {
   }
 
   ngOnInit() {
-    this.getAulas();    
+    this.getAulasStub();
+    
   }  
 
   getAulas(): void {
@@ -41,6 +44,10 @@ export class ListarAulaComponent implements OnInit {
 
   delete(id: number){
     console.log(this.aulas[id]);
+  }
+
+  teste() {
+    console.log("teste botão");
   }
 
 }

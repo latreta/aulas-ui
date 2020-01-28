@@ -12,14 +12,9 @@ export class ScrollableTable {
     constructor(private el: ElementRef) {
     }
 
-    @HostListener('mouseover')
-    onMouseEnter(){
-        console.log("Acima da tabela");
-    }
 
     @HostListener('mouseleave')
     onMouseLeave(){
-        console.log("sai da  tabela");
         this.rolarTabela();
         console.log(this.el.nativeElement.scrollTop);
     }

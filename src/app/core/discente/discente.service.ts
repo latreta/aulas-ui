@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Discente } from '../models/discente';
+import {DISCENTES} from './mock-discentes';
 
 @Injectable({
     providedIn: 'root'
@@ -23,6 +24,10 @@ export class DiscenteService {
 
     listar(): Observable<Discente[]> {
         return this.http.get<Discente[]>(this.endpointURL);
+    }
+
+    listarDiscentesStub(): Observable<Discente[]> {
+        return of(DISCENTES);
     }
 
     detalharPorId(id: number){

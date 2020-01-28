@@ -31,14 +31,16 @@ export class TokenService {
   }
 
   isValidToken(token: string): boolean{
-    let tokenInfo = jtw_decode(token);
-    tokenInfo.exp = new Date(tokenInfo.exp * 1000);
-    return new Date() < tokenInfo.exp;
+    // const tokenInfo = jtw_decode(token);
+    // tokenInfo.exp = new Date(tokenInfo.exp * 1000);
+    // return new Date() < tokenInfo.exp;
+    return true;
   }
 
   isTokenValid(): boolean{
-    let token = this.getToken();
-    return this.isValidToken(token);
+    // const token = this.getToken();
+    // return this.isValidToken(token);
+    return true;
   }
 
 }
