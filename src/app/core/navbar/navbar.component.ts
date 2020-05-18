@@ -1,9 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-
-export interface NavbarLink {
-  label: string;
-  route: string[];
-}
+import { NavbarLink } from '../model/NavbarLink';
 
 @Component({
   selector: 'app-navbar',
@@ -16,6 +12,7 @@ export class NavbarComponent implements OnInit {
   options: NavbarLink[] = [];
   @Input()
   title: string;
+  homeRoute = ['/welcome'];
 
   constructor() { }
 

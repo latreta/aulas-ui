@@ -4,9 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-root',
   templateUrl: './app.component.html'
 })
-export class AppComponent implements OnInit{
-  title = 'PoliClass';
-
+export class AppComponent implements OnInit {
 
   ngOnInit() {
     

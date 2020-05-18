@@ -8,6 +8,7 @@ import { MainComponent } from './components/main/main.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { SigninComponent } from './components/signin/signin.component';
 import { SharedModule } from './shared/shared.module';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { SharedModule } from './shared/shared.module';
     BrowserAnimationsModule,
     AppRoutingModule,
     // App Modules
-    SharedModule
+    SharedModule,
+    CoreModule
   ],
   bootstrap: [AppComponent]
 })
